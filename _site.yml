@@ -8,6 +8,7 @@ navbar:
     - text: "Pre-Requisites"
       href: Pre-Requisites.html
 output:
-  html_document:
-    theme: cosmo
+  prettydoc::html_pretty:
+    theme: architect
+    highlight: github
     
