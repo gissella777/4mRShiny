@@ -7,7 +7,7 @@ title: "Pre-Requisites"
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 h1,h2 {font-family: 'Unica One', cursive;
-      font-size: 85px;}
+      font-size: 30px;}
 p {font-family: 'Open Sans', sans-serif;
       font-size: 13px;}      
 </style>
