@@ -1,13 +1,5 @@
 ---
 title: "Pre-Requisites"
-knit: (function(input_file, encoding) {
-  out_dir <- 'docs';
-  rmarkdown::render(input_file,
- encoding=encoding,
- output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
-author: Gissella & Nir
-date: 13/12/2019
-output: html_document
 ---
 <style>
 @import url('https://fonts.googleapis.com/css?family=Scope+One&display=swap');

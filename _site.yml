@@ -1,0 +1,12 @@
+name: "4Most"
+output_dir: "docs"
+navbar:
+  title: "4Most"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Pre-Requisites"
+      href: Pre-Requisites.html
+output:
+  html_document:
+    theme: cosmo
