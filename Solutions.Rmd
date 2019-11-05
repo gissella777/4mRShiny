@@ -32,16 +32,16 @@ knitr::opts_chunk$set(echo = TRUE)
 - Use of Plotly  
 
 
-# User-Interface {#ui_sol}
+# /User-Interface {#ui_sol}
 
 On slide x, there are 4 UI creation problems. The following sections contains solutions for this section. 
 
 [Home](#home)
 
 
-## Solutions to Practice Problems
+## //Solutions to Practice Problems
 
-### First Problem
+### ///First Problem
 
 In the first problem, you need to create an interface containing a TitlePanel and 2 columns below as illustrated: 
 
