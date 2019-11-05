@@ -32,23 +32,23 @@ knitr::opts_chunk$set(echo = TRUE)
 - Use of Plotly  
 
 
-# User-Interface {#ui_sol}
+# /User-Interface {#ui_sol}
 
 On slide x, there are 4 UI creation problems. The following sections contains solutions for this section. 
 
 [Home](#home)
 
 
-## Solutions to Practice Problems
+## //Solutions to Practice Problems
 
-### First Problem
+### ///First Problem
 
 In the first problem, you need to create an interface containing a TitlePanel and 2 columns below as illustrated: 
 
 ```{r app2, echo=FALSE}
-shinyAppDir("C:/Users/GissellaMontenegro/Documents/app_demo1",
+shinyAppDir("ui_demo1",
   options = list(
-    width = "100%", height = 550
+    width = "100%", height = 500
   )
 )
 ```
@@ -94,9 +94,9 @@ ui <- fluidPage(
 
 In the second problem, you need to create an interface with a titlePanel, 2 columns below, and a full bottom panel spanning the entire width of the page:
 ```{r app2b, echo=FALSE}
-shinyAppDir("C:/Users/GissellaMontenegro/Documents/app_demo2",
+shinyAppDir("ui_demo2",
   options = list(
-    width = "100%", height = 550
+    width = "100%", height = 570
   )
 )
 ```
@@ -143,7 +143,7 @@ ui <- fluidPage(
 
 In the third problem, you need to create an interface with a titlePanel and a main panel containing 3 tabs spanning the entire width of the page. Each tab will be a separate page -
 ```{r app3, echo=FALSE}
-shinyAppDir("C:/Users/GissellaMontenegro/Documents/layout_demo",
+shinyAppDir("ui_demo3",
   options = list(
     width = "100%", height = 550
   )
@@ -199,7 +199,7 @@ ui <- fluidPage(
 
 In the fourth problem, you need to create an interface with a titlePanel and a main panel containing 3 tabs spanning the entire width of the page. Each tab will be a separate page -
 ```{r app4, echo=FALSE}
-shinyAppDir("C:/Users/GissellaMontenegro/Documents/app_demo4",
+shinyAppDir("ui_demo4",
   options = list(
     width = "100%", height = 550
   )
