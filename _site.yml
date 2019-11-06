@@ -5,10 +5,10 @@ navbar:
   left:
     - text: "Home"
       href: index.html
-    - text: "Why R Shiny?"
-      href: WhyShiny.html
     - text: "Pre-Requisites"
       href: Pre-Requisites.html
+    - text: "Why R Shiny?"
+      href: WhyShiny.html
 output:
   html_document:
     theme: cosmo
