@@ -9,6 +9,27 @@ navbar:
       href: Pre-Requisites.html
     - text: "Why R Shiny?"
       href: WhyShiny.html
+    - text: "Shiny Core 1"
+      href: Core1.html
+      menu:
+        - text: "User Interface"
+          href: UI.html
+        - text: "Server"
+          href: Server.html
+        - text: "Inputs & Outputs"
+          href: Widgets1.html
+        - text: "Reactivity"
+          href: Reactivity.html
+        - text: "Dynamic UI"
+          href: DynamicUI.html
+        - text: "Useful Packages"
+          href: UsefulPack.html
+    - text: "Shiny Core 2"
+      href: Core2.html
+    - text: "Shiny Core 3"
+      href: Core3.html
+    - text: "Resources"
+      href: Resources.html
 output:
   html_document:
     theme: cosmo
