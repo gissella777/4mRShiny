@@ -5,6 +5,23 @@ title: "Debugging"
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+&nbsp;  
+If we're incredibly lucky, everything works the first time and we have no errors. If so, we can dance...
+<center>
+<br>
+<div style="width:35%; height:35%">
+![](carlton.gif)
+</div>
+</center>
+&nbsp;
+
+But let's get back to reality because the sad truth is that you will experience errors that will make you crazy! With this in mind, this section will address debugging.
+&nbsp;
+
+<center>
+<iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={6f4c69c7-db05-459d-bb27-41135e1e7492}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+</center>  
+&nbsp;  
 
 ## R Markdown
 
