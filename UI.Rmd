@@ -5,6 +5,21 @@ title: "UI"
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+&nbsp;  
+Before we go into the nitty gritty of a UI, let's go through where it fits into the wider picture...
+&nbsp;  
+
+<iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={418643d4-bffe-4be7-9df6-91dec54081da}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+
+&nbsp;  
+
+**Great!** Now that we know why and what a UI is, let's learn how to create one.
+&nbsp;  
+<center>
+<iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={a8bcb6b2-b059-4e2c-b2ba-9f184e879e84}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+</center>
+
+&nbsp;  
 
 ## R Markdown
 
