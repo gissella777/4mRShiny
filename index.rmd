@@ -1,9 +1,47 @@
-
-
 <br>
+
+# 
 
 <center>
 <div style="width:95%; height:85%">
 ![](introslide.png)
 </div>
 </center>
+
+<br>
+
+# Overview
+
+Interested in turning your analysis in to sleek, production ready interactive dashboards? This day long workshop will introduce the basics of using R Shiny, the industry standard R Reporting tool, to create your own hosted web applications. By the end of the session you’ll have built your very own fully interactive app in R to simplify a real business problem.
+
+**Requirements:** A good level of knowledge of R is required to participate. If you’re unsure about your experience, contact Gissella or Nir. **To attend you must also ensure, you've completed all the Pre-reqs.**
+  
+&nbsp;  
+  
+# Structure
+
+We start with understanding what Shiny is and why we're learning to use it today.
+
+#### After the intro, this workshop is split into 3 key sections:  
+  - Core Shiny 1 - The Shiny structure and building your first app  
+  - Core Shiny 2 - Customisation and going beyond the default Shiny appearance  
+  - Core Shiny 3 - Debugging and deploying your app into the real world  
+
+&nbsp;
+
+# Projects
+
+The Pre-Requisites section contains 3 datasets to use as a basis for an R Shiny App. You can build an app with most data but we're restricting today to these three for ease.
+
+#### Current Datasets:
+  - Predicting Poverty in Costa Rica
+  - AirBnb & Berlin
+  - Speed-Dating
+  
+&nbsp;
+  
+# Looking for more information?
+
+
+
+
