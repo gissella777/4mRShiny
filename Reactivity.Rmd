@@ -5,6 +5,14 @@ title: "Reactivity"
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+&nbsp;  
+In this section, we will address the following questions: **How do the elements in a Shiny app interact? How can we have them update themselves? Can we make actions in one element cause a change in another?**  
+&nbsp;  
+
+
+<iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={1ecce761-5dd9-495f-9cf2-b18ed948e3ac}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+&nbsp;  
+
 
 ## R Markdown
 
