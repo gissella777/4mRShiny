@@ -5,6 +5,15 @@ title: "UsefulPack"
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+&nbsp;  
+We'd like to highlight some R packages that can make your life easier and your app snazzier. 
+&nbsp;  
+
+<center>
+<iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={b7d0bac3-469a-490c-b952-b8a8c43602f2}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+</center>
+&nbsp;  
+
 
 ## R Markdown
 
