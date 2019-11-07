@@ -26,8 +26,24 @@ navbar:
           href: UsefulPack.html
     - text: "Shiny Core 2"
       href: Core2.html
+      menu:
+        - text: "Data Visualization"
+          href: DataViz.html
+        - text: "Graphs"
+          href: Graphs.html
+        - text: "Customisation"
+          href: Custom.html
+        - text: "Dashboards"
+          href: Dashboards.html
+        - text: "Shiny Extensions"
+          href: Extensions.html
     - text: "Shiny Core 3"
       href: Core3.html
+      menu:
+        - text: "Debugging"
+          href: Debugging.html
+        - text: "Deployment"
+          href: Deployment.html
     - text: "Resources"
       href: Resources.html
 output:
