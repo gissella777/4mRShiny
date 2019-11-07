@@ -5,6 +5,24 @@ title: "Extensions"
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+&nbsp;  
+Extending R Shiny - Not packages/libraries but integrating items not typically in the R world.
+&nbsp;  
+
+<center>
+<iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={3606ae03-050b-4b04-bbfc-8270ab273330}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+</center>  
+&nbsp; 
+
+### Example of integrating d3.js in R (Use of r2d3)
+&nbsp;  
+
+<center>
+<iframe width="100%" height="700" src="http://www.r2d3.us/visual-intro-to-machine-learning-part-1/" frameborder="1" allowfullscreen></iframe>
+</center>
+
+&nbsp;  
+
 
 ## R Markdown
 
