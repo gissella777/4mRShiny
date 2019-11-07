@@ -5,6 +5,22 @@ title: "Custom"
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+&nbsp;  
+
+### So we have created an app. It works and has all the components you need..but it looks a bit...
+<center>
+<iframe src="https://giphy.com/embed/11d6avgEFTqmBO" width="200" height="183" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+</center>
+### **So what do we do??**
+### We use HTML and CSS! The following section aims to show you how HTML and CSS are used in Shiny and how you can use it without having to become a full-blown website developer.
+&nbsp;  
+
+<center>
+<iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={efbfce59-1156-4043-87a3-f574f0298761}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+</center>
+&nbsp;  
+
+
 
 ## R Markdown
 
