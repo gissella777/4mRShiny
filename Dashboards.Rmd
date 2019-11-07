@@ -6,6 +6,7 @@ title: "Dashboards"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 &nbsp;  
+
 Section to go through Dashboards - What are they? How to use Flexdashboard?
 &nbsp;  
 
@@ -13,9 +14,6 @@ Section to go through Dashboards - What are they? How to use Flexdashboard?
 <iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={54a1b0a2-cb33-4989-9ca3-32d8da037ad0}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
 </center>
 &nbsp;  
-
-
-
 
 ## R Markdown
 
