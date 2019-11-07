@@ -1,11 +1,22 @@
 ---
-title: "Widgets1"
+title: "Inputs & Outputs"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+&nbsp;  
+Ok, we know where to place things and where to tell them what to do - but what can we put in an app??
+&nbsp; 
 
+<center>
+<iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={57513390-37f3-4db5-9506-ce8fbb21048e}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+</center>
+
+&nbsp; 
+
+## GISSELLA NOTE: IT MAY MAKE MORE SENSE TO PULL THIS CONTENT OUT OF SLIDES.  
+  
 ## R Markdown
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
