@@ -5,7 +5,26 @@ title: "Why Shiny?"
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+&nbsp;  
 
 <center>
 <iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={1b639700-c918-423d-b168-55eb1df8868d}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
 </center>
+
+&nbsp;  
+
+<center>
+<iframe src="https://giphy.com/embed/UVG0BN8TOMKkPOJS6e" width="75" height="75" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+<font size="14">Your First Task!</font>
+<iframe src="https://giphy.com/embed/UVG0BN8TOMKkPOJS6e" width="75" height="75" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+</center>
+
+&nbsp;  
+
+We will gradually build an app in steps today. Follow the brief below for your first step. 
+<center>
+<iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={e3d5ed33-23c3-49c4-8882-ea750e468c25}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+</center>
+
+
+
