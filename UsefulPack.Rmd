@@ -14,23 +14,122 @@ We'd like to highlight some R packages that can make your life easier and your a
 </center>
 &nbsp;  
 
-
 ## R Markdown
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```{r cars}
-summary(cars)
+### Plotly  
+
+Plotly allows you to easily translate your ggplot2 graphics to an interactive web-based version, and also provides bindings to the plotly.js graphing library.  
+
+[Plotly Website](https://plot.ly/r/)  
+
+```{r plotly, echo=FALSE, message=FALSE, warning=FALSE}
+library(ggplot2)
+library(plotly)
+p <- ggplot(data = diamonds, aes(x = cut, fill = clarity)) +
+            geom_bar(position = "dodge")
+ggplotly(p)
 ```
 
-## Including Plots
+## Dygraphs
 
-You can also embed plots, for example:
+Dygraphs provides rich facilities for charting time-series data in R and includes support for many interactive features including series/point highlighting, zooming, and panning.  
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+[Dygraphs Website](http://rstudio.github.io/dygraphs)  
+
+```{r dygraph, echo=FALSE, message=FALSE, warning=FALSE}
+library(dygraphs)
+dygraph(nhtemp, main = "New Haven Temperatures") %>% 
+  dyRangeSelector(dateWindow = c("1920-01-01", "1960-01-01"))
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+## Leaflet  
+
+Leaflet is a JavaScript library for creating dynamic maps that support panning and zooming along with various annotations like markers, polygons, and popups.  
+
+[Leftlet Github](http://rstudio.github.io/leaflet/)  
+
+```{r}
+library(leaflet)
+
+m <- leaflet() %>%
+  addTiles() %>%  # Add default OpenStreetMap map tiles
+  addMarkers(lng=174.768, lat=-36.852, popup="The birthplace of R")
+m  # Print the map
+```
+
+## Datatables  
+
+DataTables displays R matrices or data frames as interactive HTML tables that support filtering, pagination, and sorting.  
+
+[DT Website](http://rstudio.github.io/DT/)  
+
+```{r}
+library(DT)
+datatable(iris, options = list(pageLength = 5))
+```
+
+
+## visNEtwork  
+
+Useful library to visualize networks  
+
+[visNework Github](http://dataknowledge.github.io/visNetwork)  
+
+```{r}
+library(visNetwork)
+nodes <- data.frame(id = 1:6, title = paste("node", 1:6), 
+                    shape = c("dot", "square"),
+                    size = 10:15, color = c("blue", "red"))
+edges <- data.frame(from = 1:5, to = c(5, 4, 6, 3, 3))
+visNetwork(nodes, edges) %>%
+  visOptions(highlightNearest = TRUE, nodesIdSelection = TRUE)
+```
+
+## d3heatmap  
+
+Interactive heatmaps with D3 including support for row/column highlighting and zooming.  
+
+[d3heatmap Website](https://github.com/rstudio/d3heatmap)  
+
+```{r}
+library(d3heatmap)
+d3heatmap(mtcars, scale="column", colors="Blues")
+```
+
+## DiagrammeR  
+
+A tool for creating diagrams and flowcharts using Graphviz and Mermaid. You can use this to create process flows.  
+
+[DiagrammeR](http://rich-iannone.github.io/DiagrammeR/)  
+
+```{r}
+library(DiagrammeR)
+grViz("
+  digraph {
+    layout = twopi
+    node [shape = circle]
+    A -> {B C D} 
+  }")
+```
+
+## threejs  
+
+threejs has produced widgets for R Shiny. If you want to play around with a 3-D movable graph.  
+
+[threejs Website](https://github.com/bwlewis/rthreejs)  
+
+```{r message=FALSE, warning=FALSE}
+library(threejs)
+z <- seq(-10, 10, 0.01)
+x <- cos(z)
+y <- sin(z)
+scatterplot3js(x,y,z, color=rainbow(length(z)))
+```
+
+
+
+
