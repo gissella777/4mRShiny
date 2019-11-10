@@ -1,22 +1,42 @@
 ---
-title: "Server"
----
 
+---
+<style>
+@import url('https://fonts.googleapis.com/css?family=Scope+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Scope+One|Unica+One&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+h1,h2 {font-family: 'Unica One', cursive;
+      font-size: 25px;}
+p {font-family: 'Open Sans', sans-serif;
+      font-size: 13px;}      
+</style>
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+# Server {.tabset .tabset-fade}
+
+## Intro to Server  
+
 &nbsp;  
 Equally as important as the UI is the Server component of an R Shiny app. Without the server, a UI is pretty but useless...
 &nbsp;  
 
 <iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={a2541ca7-1d47-4aee-a2e6-5773b2f0579e}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
 
-&nbsp;  
+&nbsp;    
 
-## Examples
+## Examples  
 
 GISSELLA NOTE: I WOULD LIKE TO EMBED EXAMPLES OF RSHINY APPS (+ ADD CODE CHUNKS) WITH SAME UI CODE/DIFFERENT SERVER CODE.  
 
 GISSELLA NOTE 2: CHANGE PROCESS FLOW SLIDE AT THE END. TOO CONFUSING!
 
-Note just to update branch.
+Note just to update branch.  
+
+&nbsp;    
+
+## Server Practice  
+
+Practice problem - optional
