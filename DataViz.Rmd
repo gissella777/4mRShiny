@@ -1,10 +1,17 @@
 ---
-title: "DataViz"
+
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+&nbsp;   
+
+
+# Data Visualization {.tabset .tabset-fade}  
+
+## Intro  
+
 &nbsp;  
 Data Visualization -- As people who work with SAS and Excel regularly, it's quite easy to fall into the trap of believing we know how to best visualize and present data to others. But do you really?  
 The aim of this section is to give you a grounding in how to best visualize data when presenting data in both static and dynamic formats.  
@@ -13,25 +20,29 @@ The aim of this section is to give you a grounding in how to best visualize data
 <center>
 <iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={0b840175-f723-413c-9110-16496397426b}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
 </center>
+
 &nbsp;  
 
+## Basic Principles    
 
-## R Markdown
+&nbsp;  
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+## Cognition  
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+&nbsp;  
 
-```{r cars}
-summary(cars)
-```
+## Resources  
 
-## Including Plots
+&nbsp;  
 
-You can also embed plots, for example:
+## Practice    
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
+&nbsp;  
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+## Checkpoint    
+
+&nbsp;
+
+## Inspiration  
+
+&nbsp;
