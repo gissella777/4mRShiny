@@ -1,11 +1,25 @@
 ---
-title: "Why Shiny?"
+
 ---
+<style>
+@import url('https://fonts.googleapis.com/css?family=Scope+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Scope+One|Unica+One&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+h1,h2 {font-family: 'Unica One', cursive;
+      font-size: 25px;}
+p {font-family: 'Open Sans', sans-serif;
+      font-size: 13px;}      
+</style>
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 &nbsp;  
+
+# Why Shiny {.tabset .tabset-fade}  
+
+## Intro  
 
 <center>
 <iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={1b639700-c918-423d-b168-55eb1df8868d}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
@@ -13,6 +27,12 @@ knitr::opts_chunk$set(echo = TRUE)
 
 &nbsp;  
 
+## Starting to Build     
+
+Explanation
+
+
+## Checkpoint 1
 <center>
 <iframe src="https://giphy.com/embed/UVG0BN8TOMKkPOJS6e" width="75" height="75" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 <font size="14">Your First Task!</font>
