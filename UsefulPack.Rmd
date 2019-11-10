@@ -14,11 +14,11 @@ We'd like to highlight some R packages that can make your life easier and your a
 </center>
 &nbsp;  
 
-## R Markdown
+## Packages not to miss!  
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+The packages below have been developed by others for use in R Shiny. They allow for more interactivity without having learn another language (i.e., Python, Javascript, etc.). Depending on the developer, some packages are more flexible than others so I would recommend checking out the documentation to see the limits of each.  
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+&nbsp;  
 
 ### Plotly  
 
@@ -33,6 +33,7 @@ p <- ggplot(data = diamonds, aes(x = cut, fill = clarity)) +
             geom_bar(position = "dodge")
 ggplotly(p)
 ```
+&nbsp;  
 
 ## Dygraphs
 
@@ -45,6 +46,7 @@ library(dygraphs)
 dygraph(nhtemp, main = "New Haven Temperatures") %>% 
   dyRangeSelector(dateWindow = c("1920-01-01", "1960-01-01"))
 ```
+&nbsp;  
 
 ## Leaflet  
 
@@ -60,6 +62,7 @@ m <- leaflet() %>%
   addMarkers(lng=174.768, lat=-36.852, popup="The birthplace of R")
 m  # Print the map
 ```
+&nbsp;  
 
 ## Datatables  
 
@@ -71,7 +74,7 @@ DataTables displays R matrices or data frames as interactive HTML tables that su
 library(DT)
 datatable(iris, options = list(pageLength = 5))
 ```
-
+&nbsp;  
 
 ## visNEtwork  
 
@@ -88,6 +91,7 @@ edges <- data.frame(from = 1:5, to = c(5, 4, 6, 3, 3))
 visNetwork(nodes, edges) %>%
   visOptions(highlightNearest = TRUE, nodesIdSelection = TRUE)
 ```
+&nbsp;  
 
 ## d3heatmap  
 
@@ -99,6 +103,7 @@ Interactive heatmaps with D3 including support for row/column highlighting and z
 library(d3heatmap)
 d3heatmap(mtcars, scale="column", colors="Blues")
 ```
+&nbsp;  
 
 ## DiagrammeR  
 
@@ -115,6 +120,7 @@ grViz("
     A -> {B C D} 
   }")
 ```
+&nbsp;  
 
 ## threejs  
 
