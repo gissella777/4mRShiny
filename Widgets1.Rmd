@@ -1,10 +1,18 @@
 ---
-title: "Inputs & Outputs"
+
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+&nbsp;   
+
+
+
+# Inputs & Outputs {.tabset .tabset-fade}  
+
+## Intro  
+
 &nbsp;  
 Ok, we know where to place things and where to tell them what to do - but what can we put in an app??
 &nbsp; 
@@ -15,24 +23,34 @@ Ok, we know where to place things and where to tell them what to do - but what c
 
 &nbsp; 
 
-## GISSELLA NOTE: IT MAY MAKE MORE SENSE TO PULL THIS CONTENT OUT OF SLIDES.  
+GISSELLA NOTE: IT MAY MAKE MORE SENSE TO PULL THIS CONTENT OUT OF SLIDES.  
+&nbsp;   
+
+## Widgets 101
+
+&nbsp;  
+Delve in deeper (coding part) - also mention widget gallery online and in console
+
+## Examples  
+
+&nbsp;  
+Widget examples 
+
+## Practice  
+
+&nbsp;  
+Practice problems  
+
+## Checkpoint 3
+
+&nbsp;  
+Add checkpoint 
+
+## Advanced Widgets
+
+&nbsp;  
+More resource than to actually cover
+
+
+
   
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
