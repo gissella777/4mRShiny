@@ -1,5 +1,9 @@
 ---
-
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'Server.html'))})
 ---
 <style>
 @import url('https://fonts.googleapis.com/css?family=Scope+One&display=swap');
@@ -14,6 +18,7 @@ p {font-family: 'Open Sans', sans-serif;
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+&nbsp;  
 
 # Server {.tabset .tabset-fade}
 

@@ -14,6 +14,7 @@ p {font-family: 'Open Sans', sans-serif;
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+&nbsp;  
 
 # UI {.tabset .tabset-fade}
 
