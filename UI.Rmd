@@ -14,9 +14,10 @@ p {font-family: 'Open Sans', sans-serif;
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-&nbsp;  
+&nbsp;    
 
-# UI {.tabset .tabset-fade}
+
+# UI {.tabset .tabset-fade}  
 
 ## UI Intro  
 &nbsp;    
