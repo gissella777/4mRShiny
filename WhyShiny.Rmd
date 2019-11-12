@@ -64,13 +64,55 @@ Real estate analytics, prediction modeling and forecasting for over 20,000 U.S. 
 
 ## Starting to Build     
 
-Explanation
+### Let's get started!  
+<img style="width:30px; height:25px" src="Practical.png"> <p style="font-size:16px; display:inline;">Task 1: Create the folder structure in your working directory as shown below. </p></img>  
 
+
+&nbsp;
+<center>
+<div style="width:95%; height:85%">
+![](WhyLearn_Start_1.png)
+</div>
+</center>
+&nbsp;  
+
+<img style="width:30px; height:25px" src="Practical.png"> <p style="font-size:16px; display:inline;">Task 2: Create Shiny script and load Shiny library. </p></img> 
+&nbsp;  
+
+<p style="font-size:14px;">To create your first Shiny app you have **two** options:  
+
+1) Open a new script and insert the following:</p>
+```{r eval=FALSE}
+library(shiny)
+
+ui <- fluidPage()
+
+server <- function(input, output) {}
+
+shinyApp(ui = ui, server = server)
+```
+
+&nbsp;  
+<p style="font-size:14px;"> 2) While in your working directory (as created above), go to *File--> New File--> Shiny Web App*.This option will create a Shiny App in two scripts rather than one.</p>  
+<center>
+<div style="width:50%; height:50%">
+![](Create_app.png)
+
+&nbsp;  
+<img style="width:30px; height:25px" src="Practical.png"> <p style="font-size:16px; display:inline;">Task 3: Your app will be empty or will contain default code. Test Shiny works by running your app as shown below. </p></img> 
+
+&nbsp;  
+<center>
+<div style="width:95%; height:85%">
+![](WhyLearn_Start_2.png)
+</div>
+</center>
+&nbsp;  
 
 ## Checkpoint 1
 <center>
 <iframe src="https://giphy.com/embed/UVG0BN8TOMKkPOJS6e" width="75" height="75" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-<font size="14">Your First Task!</font>
+<font size="14">App Time</font>
 <iframe src="https://giphy.com/embed/UVG0BN8TOMKkPOJS6e" width="75" height="75" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </center>
 
