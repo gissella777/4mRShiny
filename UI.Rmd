@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## UI Intro  
 &nbsp;    
-Before we go into the nitty gritty of a UI, let's go through where it fits into the wider picture...  
+Before we go into the nitty gritty of a UI (User Interface), let's go through where it fits into the wider picture...  
 &nbsp;  
 
 <iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={418643d4-bffe-4be7-9df6-91dec54081da}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
@@ -36,20 +36,29 @@ Before we go into the nitty gritty of a UI, let's go through where it fits into 
 <center>
 <iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={a8bcb6b2-b059-4e2c-b2ba-9f184e879e84}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
 </center>
-
 &nbsp;  
 
-## UI Practice
+## UI Practice    
+&nbsp;    
+Practice your knowledge! For solutions today - ask Gissella or Nir :)  
+&nbsp;    
 
+<iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={0773d174-dea0-47bc-8a5b-33fcac729730}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>  
 &nbsp;  
 
-## Design Considerations
 
+## Design Considerations  
+
+&nbsp;    
+<iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={edb6264a-3bf7-4e09-9c6a-768e6cfb0a1c}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>  
 &nbsp;  
 
 ## Checkpoint 2
+&nbsp;    
+Time for the next step in creating our app today:  
+&nbsp; 
 
+<iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={d0742f79-f991-4f49-969e-18c4ed484796}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
 &nbsp;  
-
 
 
