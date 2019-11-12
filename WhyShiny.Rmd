@@ -27,6 +27,41 @@ knitr::opts_chunk$set(echo = TRUE)
 
 &nbsp;  
 
+## Shiny Site Examples  
+
+&nbsp;    
+
+Below are examples of what can be done in Shiny.  
+
+&nbsp;    
+Police and Demand Planning Tool
+
+&nbsp;    
+
+<center>
+<iframe width="100%" height="550" src="https://gallery.shinyapps.io/TSupplyDemand/" scrolling= "yes"></iframe>
+</center>  
+
+&nbsp;    
+
+A Shiny App to visualize and share a dog's medical history. [Github Code](https://github.com/jennaallen/dog_days/tree/master/pet-records-app)  
+&nbsp;  
+
+<center>
+<iframe width="100%" height="550" src="https://jennadallen.shinyapps.io/pet-records-app/" scrolling= "yes"></iframe>  
+</center>    
+
+&nbsp;    
+
+Real estate analytics, prediction modeling and forecasting for over 20,000 U.S. real estate markets. [Github Code](https://github.com/j2scode/shinyHome) 
+&nbsp;    
+
+<center>
+<iframe width="100%" height="550" src="https://jjames.shinyapps.io/shinyHome/" scrolling= "yes"></iframe>  
+</center>  
+
+&nbsp;    
+
 ## Starting to Build     
 
 Explanation
