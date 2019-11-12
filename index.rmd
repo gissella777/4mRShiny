@@ -1,3 +1,15 @@
+---
+---
+<style>
+@import url('https://fonts.googleapis.com/css?family=Scope+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Scope+One|Unica+One&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+h1,h2 {font-family: 'Unica One', cursive;
+      font-size: 25px;}
+p {font-family: 'Open Sans', sans-serif;
+      font-size: 13px;}      
+</style>
 <br>
 
 # 
@@ -22,7 +34,7 @@ Interested in turning your analysis in to sleek, production ready interactive da
 
 We start with understanding what Shiny is and why we're learning to use it today.
 
-#### After the intro, this workshop is split into 3 key sections:  
+##### After the intro, this workshop is split into 3 key sections:  
   - Core Shiny 1 - The Shiny structure and building your first app  
   - Core Shiny 2 - Customisation and going beyond the default Shiny appearance  
   - Core Shiny 3 - Debugging and deploying your app into the real world  
@@ -33,14 +45,17 @@ We start with understanding what Shiny is and why we're learning to use it today
 
 The Pre-Requisites section contains 3 datasets to use as a basis for an R Shiny App. You can build an app with most data but we're restricting today to these three for ease.
 
-#### Current Datasets:
+##### Current Datasets:
   - Predicting Poverty in Costa Rica
   - AirBnb & Berlin
   - Speed-Dating
   
 &nbsp;
   
-# Looking for more information?
+# Looking for more information?  
+
+Read through the material and interested in learning more?  
+Awesome sauce! Checkout the Resources page for further Shiny information and tutorials. If the internet fails you, feel free to email Nir (Nir.Graham@4-most.co.uk) or Gissella (Gissella.Montenegro@4-most.co.uk).
 
 
 
