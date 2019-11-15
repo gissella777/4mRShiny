@@ -1,37 +1,57 @@
 ---
-title: "Graphs"
----
 
+---
+<style>
+@import url('https://fonts.googleapis.com/css?family=Scope+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Scope+One|Unica+One&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+h1,h2 {font-family: 'Unica One', cursive;
+      font-size: 25px;}
+p {font-family: 'Open Sans', sans-serif;
+      font-size: 15px;}      
+</style>
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-&nbsp;  
-Section to go through graph choices and resources  
-&nbsp;  
+&nbsp;    
+
+
+# Graphs {.tabset .tabset-fade}  
+
+## Which Graph?  
+
+&nbsp;    
+<p>As mentioned earlier, the choice of graph is important. You needs to balance the requirement to inform verus overwhelming your end user with information. As a rule of thumb...</p>  
+
+![](graph_joke.png)
+
+<p> **We start with what sort of relationship/information are you trying to convey? What type of graph best conveys that sort of information?** </p>  
+
+&nbsp;    
+
+![](Graph_slide1.png)
+![](Graph_slide2.png)
+![](Graph_slide3.png)
+![](Graph_slide4.png)
+
+![](Graph_slide5.png)
+
+![](Graph_slide6.png)
+&nbsp;    
+
+## Resources  
+&nbsp;      
+<p>Given the number of options out there, I've scoured the internet far and wide for a useful resources. The following site not only assists you in choosing the right sort of graph but also provides you with examples and R code that can be used to create your chosen graph! For those who are interested, the site also provides Python examples.</p>  
+&nbsp; 
 
 <center>
-<iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={4c5ce3f1-629d-4a2c-af9c-7c7596edea0d}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
-</center>
+<iframe width="100%" height="550" src="https://www.r-graph-gallery.com/index.html
+" scrolling= "yes"></iframe>  
+</center>    
+
+
+## Practice  
+&nbsp;      
+As mentioned earlier, the choice of graph is important
 &nbsp;  
-
-
-
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
