@@ -1,10 +1,25 @@
 ---
-title: "DynamicUI"
----
 
+---
+<style>
+@import url('https://fonts.googleapis.com/css?family=Scope+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Scope+One|Unica+One&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+h1,h2 {font-family: 'Unica One', cursive;
+      font-size: 25px;}
+p {font-family: 'Open Sans', sans-serif;
+      font-size: 14px;}      
+</style>
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+&nbsp;    
+
+
+# Dynamic UI {.tabset .tabset-fade}  
+
+## Intro to Dynamic UIs
 &nbsp;  
 Using what you know about reactivity, learn how to make your UI dynamic!
 &nbsp;  
@@ -15,22 +30,11 @@ Using what you know about reactivity, learn how to make your UI dynamic!
 &nbsp;  
 
 
-## R Markdown
+## Examples  
+&nbsp;  
+in code add example of static vs. dynamic first  
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+add example of code + ui changing
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+## Checkpoint 5
+&nbsp;  
