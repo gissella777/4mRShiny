@@ -1,20 +1,14 @@
 ---
-title: "UsefulPack"
+
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-&nbsp;  
-We'd like to highlight some R packages that can make your life easier and your app snazzier. 
-&nbsp;  
+&nbsp;    
+   
 
-<center>
-<iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={b7d0bac3-469a-490c-b952-b8a8c43602f2}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
-</center>
-&nbsp;  
-
-## Packages not to miss!  
+# Packages not to miss!  
 
 The packages below have been developed by others for use in R Shiny. They allow for more interactivity without having learn another language (i.e., Python, Javascript, etc.). Depending on the developer, some packages are more flexible than others so I would recommend checking out the documentation to see the limits of each.  
 
