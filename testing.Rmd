@@ -1,0 +1,23 @@
+---
+title: "Hello, Tutorial!"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+```
+
+This code computes the answer to one plus one, change it so it computes two plus two:
+
+```{r addition, exercise=TRUE}
+1 + 1
+```
+
+testing more:  
+
+```{r addition2, exercise=TRUE}
+x=1
+x
+```
+
