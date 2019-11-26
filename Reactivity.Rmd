@@ -8,23 +8,119 @@
 
 h1,h2 {font-family: 'Unica One', cursive;
       font-size: 25px;}
+p2 {font-family: 'Unica One', cursive;
+      font-size: 25px;}       
 p {font-family: 'Open Sans', sans-serif;
-      font-size: 14px;}      
+      font-size: 15px;}      
 </style>
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 &nbsp;    
 
-
 # Reactivity {.tabset .tabset-fade}  
 
 ## Intro to Reactivity  
 &nbsp;  
-<p>In this section, we will address the following questions: How do the elements in a Shiny app interact? How do outputs happen? Can we make actions in one element cause a change in another? </p>
+
+<p2>Understanding Reactivity</p2>
 &nbsp;  
 
-<iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={1ecce761-5dd9-495f-9cf2-b18ed948e3ac}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+<p>**Reactivity** is one of the concepts which allows a Shiny app to be interactive. It is essentially a style of programming which provides a way for a program to compute outputs from a given set of user inputs. Because a Shiny app is able to use reactivity, two-way communication between the end-user and underlying data is possible. 
+<br><br>
+Use cases for reactivity in Shiny include:  
+<ul>
+  <li>Performing different types of regressions based on which model type a user chooses</li>
+  <li>Manipulating data</li>
+  <li>Graphs which update based on chosen data</li>
+</ul> 
+<br>
+</p>
+
+<style>
+div.blue {background-color:#0f0f4b; border-radius:5px; padding:20px;}
+</style>
+
+<div class="blue">
+<font color="white">
+<center><p><u>Time Out</u></p></center>
+<center><p>Let's bring it back to a world famous reactive programming interface we've all used before...**Excel**! You are essentially writing logical code (formulas) to define relationships between changing inputs (i.e., cells) over time.</p></center> 
+
+<div class = "row">
+<div class = "col-md-6">
+![](excel1.png)
+<center>'Total' in column E is an Output defined by inputs X, Y and Z as shown in the formula bar.</center>
+</div>
+<div class = "col-md-6">
+![](excel2.png)
+<center>As inputs change, outputs are updated (i.e., as input X is updated from 5 to 10, the total is recomputed).</center>
+</div>
+</div>
+</font>
+</div>
+<br>
+
+<p2>Reactive Components</p2>
+&nbsp;  
+
+<p>
+You have already come across the 2 of the 3 major reactive components of a Shiny app; Inputs and Outputs. Reactive expressions are used in the server script and defines the relationship between inputs and outputs. You've already created a static version of this when using widgets in the previous section.
+<br><br>
+**Reactive Inputs & Outputs**
+<br>
+A reactive **input** is an input that the end-user proved to R through the user-interface. A reactive **output** is the output provided in the interface which is created based on the reactive inputs provided by the end-user. To understand the difference between a static input and a reactive input or between a static output and and a reactive output, consider the following example. 
+<br><br>
+In the graph below, we use a car dataset that comes built into R (simply call on mpg). The input variables X and Y are static in the sense that you cannot choose a specific variable to graph in its the current format. Instead you can only look at one cross-tab of the variables you have in the dataset. 
+```{r, fig.align="center", echo=FALSE}
+library(ggplot2)
+ggplot(mpg, aes(x = displ, y = hwy, color = class)) +
+  geom_point() + xlab("Engine Displacement") + ylab("Hwy Miles per Gallon")
+```
+<br>
+Now let's take the same dataset and **make it reactive**. We want the graph to react based on the choice of X and Y variable, thereby allowing us to analyse the relationship between more than 1 pair of variables. Go ahead and change the choice of X and Y variables!
+
+<center>
+<iframe src="https://g4most.shinyapps.io/reactgraph/" width="100%" height="500px" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+</center>
+
+As you play around, notice how the graph reacts - both axis labels change and the plot itself changes. This is possible due to reactivity (i.e., by providing the input variables, the output graph can be created). To see what is happening under the hood, let's start with the following code:
+
+```{r eval=FALSE, include=TRUE}
+library(shiny)
+library(ggplot2)
+library(datasets)
+data(mpg) 
+
+ui <- fluidPage(
+    titlePanel("Reactive Graph"),
+    sidebarLayout(
+        sidebarPanel(
+            selectInput("x", "Variable X:", choice=colnames(mpg), selected = "displ" ),
+            selectInput("y", "Variable Y:", choice=colnames(mpg), selected = "hwy" )) ,   
+        mainPanel(
+            plotOutput("scatterplot"))
+    ))
+
+server <- function(input, output) {
+    output$scatterplot <- renderPlot({
+        ggplot(mpg, 
+               aes_string(x = paste0("`", input$x, "`"), 
+                          y = paste0("`", input$y, "`"), color = 'class')) +
+               geom_point() + 
+               xlab(input$x) + 
+               ylab(input$y)
+    })}
+
+shinyApp(ui = ui, server = server)
+```
+
+
+<br>
+**Reactive Expressions**
+<br>
+asdfasdf
+</p>
+
 &nbsp;  
 
 ## Compare to Observe
