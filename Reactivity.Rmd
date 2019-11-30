@@ -68,7 +68,7 @@ You have already come across the 2 of the 3 major reactive components of a Shiny
 <br><br>
 **Reactive Inputs & Outputs**
 <br>
-A reactive **input** is an input that the end-user proved to R through the user-interface. A reactive **output** is the output provided in the interface which is created based on the reactive inputs provided by the end-user. To understand the difference between a static input and a reactive input or between a static output and and a reactive output, consider the following example. 
+A reactive **input** is an input that the end-user provides to R through the user-interface (via buttons, data uploads, etc.). A reactive **output** is the output provided in the interface which is created based on the reactive inputs provided by the end-user, such as a graph or table. To understand the difference between a static input and a reactive input or between a static output and and a reactive output, consider the following example. 
 <br><br>
 In the graph below, we use a car dataset that comes built into R (simply call on mpg). The input variables X and Y are static in the sense that you cannot choose a specific variable to graph in its the current format. Instead you can only look at one cross-tab of the variables you have in the dataset. 
 ```{r, fig.align="center", echo=FALSE}
@@ -116,8 +116,29 @@ server <- function(input, output) {
 shinyApp(ui = ui, server = server)
 ```
 <br>
-The two `selectInput()` widgets in the UI allow a user to choose the reactive input data (variables selected from the mpg dataset), whilst  `plotOutput("scatterplot")` is the command which displays the reactive output. In the server script, `renderPlot` is the reactive expression which takes `input$x` and `input$y` from the `selectInput()` in UI and displays a an updated graph.
+The two `selectInput()` widgets in the UI allow a user to choose the reactive input data (variables selected from the mpg dataset), whilst  `plotOutput("scatterplot")` is the command which displays the reactive output. In the server script, `renderPlot` is the reactive expression which takes the reactive inputs `input$x` and `input$y` from the `selectInput()` in UI and displays a an updated graph.
 <br><br>
+Compared to the previous static example, Shiny is able to update the inputs, graph, and axes automatically. When a new input is chose, R re-executes and creates a new plot. Inputs can also create more than one reactive output at a time. For example, you can code a file upload which then produces a table, graph and more. 
+<br><br>
+A few things to note before heading to the next section: 
+<ul>
+  <li>Reactive values (i.e., `input$x` and `input$y` can only be used within a reactive context/expression.
+```{r eval=FALSE, include=TRUE}
+#Example of using a reactive input (input$num)without a reactive context:
+server <- function(input, output){
+  x <- input$num + 1
+}
+#Correct way to use the same reactive input in a reactive expression:
+server <- function(input, output){
+  x <- reactive({ input$num + 1 })  
+}
+```
+  </li>
+  <li>Any `render*()` function is a reactive context.</li>
+  <li>If you attempt to access a reactive inputs from outside of a reactive context, you will throw up an error.</li>
+  <li>You can use `reactive({...})` to create a reactive variable (shown in example above). A reactive variable created in this manner can be accessed like any other function in R (i.e., x can be accessed via `x()`).</li>
+</ul> 
+
 In the section 'Dynamic UIs', we'll cover how to update the UI itself (i.e., which input options are displayed). 
 <br>
 </p>
@@ -130,4 +151,8 @@ skldfj;ak
 
 ## Practice
 
+
 ## Checkpoint 4
+
+
+
