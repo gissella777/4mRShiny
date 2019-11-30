@@ -1,5 +1,10 @@
 ---
-
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'Server.html'))})
+ 
 ---
 <style>
 @import url('https://fonts.googleapis.com/css?family=Scope+One&display=swap');
@@ -29,16 +34,5 @@ Equally as important as the UI is the Server component of an R Shiny app. Withou
 
 &nbsp;    
 
-## Examples  
 
-GISSELLA NOTE: I WOULD LIKE TO EMBED EXAMPLES OF RSHINY APPS (+ ADD CODE CHUNKS) WITH SAME UI CODE/DIFFERENT SERVER CODE.  
 
-GISSELLA NOTE 2: CHANGE PROCESS FLOW SLIDE AT THE END. TOO CONFUSING!
-
-Note just to update branch.  
-
-&nbsp;    
-
-## Server Practice  
-
-Practice problem - optional
