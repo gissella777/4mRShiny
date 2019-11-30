@@ -642,7 +642,7 @@ As inputs change, outputs are updated (i.e., as input X is updated from 5 to 10,
 <iframe src="https://g4most.shinyapps.io/reactgraph/" width="100%" height="500px" frameBorder="0" class="giphy-embed" allowFullScreen>
 </iframe>
 </center>
-<p>As you play around, notice how the graph reacts - both axis labels change and the plot itself changes. This is possible due to reactivity (i.e., by providing the input variables, the output graph can be created). To see what is happening under the hood, let’s start with the following code:</p>
+<p><strong>Reactive Expressions</strong> <br> As you play around, notice how the graph reacts - both axis labels change and the plot itself changes. This is possible due to reactivity (i.e., by providing the input variables, the output graph can be created). <strong>Reactive expressions</strong> define how reactive inputs compute reactive outputs. To see what is happening under the hood, let’s start with the following code:</p>
 <pre class="r"><code>library(shiny)
 library(ggplot2)
 library(datasets)
@@ -669,7 +669,7 @@ server &lt;- function(input, output) {
     })}
 
 shinyApp(ui = ui, server = server)</code></pre>
-<br> <strong>Reactive Expressions</strong> <br> asdfasdf
+<br> The two <code>selectInput()</code> widgets in the UI allow a user to choose the reactive input data (variables selected from the mpg dataset), whilst <code>plotOutput(&quot;scatterplot&quot;)</code> is the command which displays the reactive output. In the server script, <code>renderPlot</code> is the reactive expression which takes <code>input$x</code> and <code>input$y</code> from the <code>selectInput()</code> in UI and displays a an updated graph. <br><br> In the section ‘Dynamic UIs’, we’ll cover how to update the UI itself (i.e., which input options are displayed). <br>
 </p>
 <p> </p>
 </div>

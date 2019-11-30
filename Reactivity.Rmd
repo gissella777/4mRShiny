@@ -83,7 +83,9 @@ Now let's take the same dataset and **make it reactive**. We want the graph to r
 <iframe src="https://g4most.shinyapps.io/reactgraph/" width="100%" height="500px" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </center>
 
-As you play around, notice how the graph reacts - both axis labels change and the plot itself changes. This is possible due to reactivity (i.e., by providing the input variables, the output graph can be created). To see what is happening under the hood, let's start with the following code:
+**Reactive Expressions**
+<br>
+As you play around, notice how the graph reacts - both axis labels change and the plot itself changes. This is possible due to reactivity (i.e., by providing the input variables, the output graph can be created). **Reactive expressions** define how reactive inputs compute reactive outputs. To see what is happening under the hood, let's start with the following code:
 
 ```{r eval=FALSE, include=TRUE}
 library(shiny)
@@ -113,12 +115,11 @@ server <- function(input, output) {
 
 shinyApp(ui = ui, server = server)
 ```
-
-
 <br>
-**Reactive Expressions**
+The two `selectInput()` widgets in the UI allow a user to choose the reactive input data (variables selected from the mpg dataset), whilst  `plotOutput("scatterplot")` is the command which displays the reactive output. In the server script, `renderPlot` is the reactive expression which takes `input$x` and `input$y` from the `selectInput()` in UI and displays a an updated graph.
+<br><br>
+In the section 'Dynamic UIs', we'll cover how to update the UI itself (i.e., which input options are displayed). 
 <br>
-asdfasdf
 </p>
 
 &nbsp;  
