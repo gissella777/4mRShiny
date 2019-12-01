@@ -8,8 +8,10 @@
 
 h1,h2 {font-family: 'Unica One', cursive;
       font-size: 25px;}
+p2 {font-family: 'Unica One', cursive;
+      font-size: 25px;}       
 p {font-family: 'Open Sans', sans-serif;
-      font-size: 13px;}      
+      font-size: 15px;}     
 </style>
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -40,6 +42,25 @@ Before we go into the nitty gritty of a UI (User Interface), let's go through wh
 <iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={a8bcb6b2-b059-4e2c-b2ba-9f184e879e84}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
 </center>
 &nbsp;  
+
+<p2>Delving into fluidPage(...)</p2>
+&nbsp;  
+
+<p>
+In the slides above we covered the various options for how to layout the UI for your app. Today we will focus on using **fluidpage()** to create the layout of your app as it's the most common today for general apps and you will likely come across it more often in the example code you see across the internet. This is not to say that you shouldn't learn the other two options! **Flexdahsboard()** is commonly utilised in dashboard applications (i.e., your monthly MI) and the use of CSS Grid is very likely to grow in the future.
+&nbsp; 
+
+
+In the following section, we'll look at a simplified version of the 4most Economic Model tool and how to recreate the layout. As a final step, we'll also cover conditionalPanels. 
+</p>
+&nbsp;  
+
+<p2>fluidPage(...) using a 4most app</p2>
+&nbsp;  
+
+<center>
+![](econapp.png)
+</center>
 
 ## UI Practice    
 &nbsp;    
