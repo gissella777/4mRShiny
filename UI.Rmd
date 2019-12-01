@@ -24,8 +24,11 @@ knitr::opts_chunk$set(echo = TRUE)
 Before we go into the nitty gritty of a UI (User Interface), let's go through where it fits into the wider picture...  
 &nbsp;  
 
-<iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={418643d4-bffe-4be7-9df6-91dec54081da}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
-
+<center>
+![](2.UI_Intro_a.png)
+<br><br>
+![](2.UI_Intro_b.png)
+</center>
 &nbsp;  
 
 ## UI Structure  
