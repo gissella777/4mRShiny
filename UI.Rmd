@@ -23,7 +23,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## UI Intro  
 &nbsp;    
-Before we go into the nitty gritty of a UI (User Interface), let's go through where it fits into the wider picture...  
+Before we go into the nitty gritty of a UI (User Interface), let's go through where it fits into the wider picture. Please note that we will also refer to the UI as the 'front-end' as it's the part of an app a user will get to see. The server is - yes, you guessed it! - the 'backend'.
 &nbsp;  
 
 <center>
@@ -43,14 +43,62 @@ Before we go into the nitty gritty of a UI (User Interface), let's go through wh
 </center>
 &nbsp;  
 
-<p2>Delving into fluidPage(...)</p2>
+<p2>Delving Further Into fluidPage(...)</p2>
 &nbsp;  
 
 <p>
-In the slides above we covered the various options for how to layout the UI for your app. Today we will focus on using **fluidpage()** to create the layout of your app as it's the most common today for general apps and you will likely come across it more often in the example code you see across the internet. This is not to say that you shouldn't learn the other two options! **Flexdahsboard()** is commonly utilised in dashboard applications (i.e., your monthly MI) and the use of CSS Grid is very likely to grow in the future.
+In the slides above we covered the various options for how to layout the UI for your app. Today we will focus on using **fluidpage()** to create the layout of your app as it's the most common layout function today for general Shiny apps and you will likely come across it quite often in the example code you see across the internet. This is not to say that you shouldn't learn the other two options! **Flexdahsboard()** is commonly utilised in dashboard applications (i.e., your monthly MI) and the use of CSS Grid is very likely to grow in the future.</p>  
+
+<p>As mentioned previously, **fluidPage()** is a layout function which defines defines the UI for your app. It will take on arguments as needed (i.e., content) that you may want your layout to contain.</p>
+
+```{r eval=FALSE}
+#Pseudo code examplf of the fluidPage() layout function taking on 3 arguments
+ui <- fluidPage(argument1, argument2, argument3)
+
+#You can use an 'empty' server to test the layout of your app.
+server <- function(input, output){ #empty server function
+  }
+```
+<p>So I know what you're wondering, what kind of arguments can I include and what do they do??
+You can include the following argument types:
+<ul>
+<li>Text Elements</li>
+<li></li>
+<li>Static Elements</li>
+<li>HTML</li>
+<li>Dynamic Inputs</li>
+</ul>
+In this section, we are going to focus on the first 3 elements as they have more of a direct impact on the layout of your app. 
+
+The following table contains  the various layout options that you can use. It is not an exhaustive list but does contain the functions you are most likely to need or come across. </p>
+
+|  Shiny UI Functions  |      Description      |
+|:---------------------|:----------------------|
+| fluidPage()| All fluidPage layouts must start with this function.|
+| fluidRow() | Creates a row to separate content vertically.       |
+| column()   | Passed to fluidRow to separate content horizontally.|
+| titlePanel()   | Creates a panel containing the application title.  |
+| headerPanel()  | Creates a header panel        |
+| sidebarLayout()| Creates sidebar to add content|
+| sidebarPanel() | The side Panel argument passed to sidebarLayout()  |
+| mainPanel()    | The main Panel argument passed to sidebarLayout()  |
+| tabsetPanel()  | Creates tabs on which you can add different content|
+| tabPanel()     | A tab passed to tabsetPanel() |
+| conditionalPanel()| Creates a panel which exists when a condition is met.|
+| navbarPage()   | Creates a page with a navigation bar at the top     |
+| navlistPanel() | Similar to tabPanel except that navigation is on the left instead of the top|
+
+<p>
+You can embed cretain functions inside of others, such as tabPanel() inside of tabsetPanel() or the use of mainPanel() and sidebarPanel() inside of sidebarLayout(). And yes, you could even embed sidebarLayout() inside of tabsetPanel()!
+</p>
+
+#insert examples from rstudio page
+#add links to documentation in table above
+
+
 &nbsp; 
 
-
+<p>
 In the following section, we'll look at a simplified version of the 4most Economic Model tool and how to recreate the layout. As a final step, we'll also cover conditionalPanels. 
 </p>
 &nbsp;  
