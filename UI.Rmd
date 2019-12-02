@@ -7,13 +7,13 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 h1,h2 {font-family: 'Unica One', cursive;
-      font-size: 25px;}
+  font-size: 25px;}
 p2 {font-family: 'Unica One', cursive;
-      font-size: 25px;}       
+  font-size: 25px;}       
 p {font-family: 'Open Sans', sans-serif;
-      font-size: 15px;}     
+  font-size: 15px;}     
 </style>
-```{r setup, include=FALSE}
+  ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 &nbsp;    
@@ -27,11 +27,11 @@ Before we go into the nitty gritty of a UI (User Interface), let's go through wh
 &nbsp;  
 
 <center>
-![](2.UI_Intro_a.png)
+  ![](2.UI_Intro_a.png)
 <br><br>
-![](2.UI_Intro_b.png)
+  ![](2.UI_Intro_b.png)
 </center>
-&nbsp;  
+  &nbsp;  
 
 ## UI Structure  
 &nbsp;  
@@ -39,7 +39,7 @@ Before we go into the nitty gritty of a UI (User Interface), let's go through wh
 &nbsp;  
 
 <center>
-<iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={a8bcb6b2-b059-4e2c-b2ba-9f184e879e84}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+<iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={2d107d5a-b149-495d-bbc9-56f4abc225c4}&amp;action=embedview&amp;wdAr=1.7777777777777777" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
 </center>
 &nbsp;  
 
@@ -60,36 +60,43 @@ server <- function(input, output){ #empty server function
   }
 ```
 <p>So I know what you're wondering, what kind of arguments can I include and what do they do??
-You can include the following argument types:
-<ul>
-<li>Text Elements</li>
-<li></li>
-<li>Static Elements</li>
-<li>HTML</li>
-<li>Dynamic Inputs</li>
-</ul>
-In this section, we are going to focus on the first 3 elements as they have more of a direct impact on the layout of your app. 
+  You can include the following argument types:
+  <ul>
+  <li>Text Elements</li>
+  <li></li>
+  <li>Static Elements</li>
+  <li>HTML</li>
+  <li>Dynamic Inputs</li>
+  </ul>
+  In this section, we are going to focus on the first 3 elements as they have more of a direct impact on the layout of your app. 
 
-The following table contains  the various layout options that you can use. It is not an exhaustive list but does contain the functions you are most likely to need or come across. </p>
+<p>The following table contains  the various layout options that you can use. It is not an exhaustive list but does contain the functions you are most likely to need or come across. Non-fluidPage layout options are listed toward the bottom. </p>
+  
+  |  Shiny UI Functions  |      Description      |
+  |:---------------------|:----------------------|
+  | [fluidPage()](https://shiny.rstudio.com/reference/shiny/0.14/column.html)| All fluidPage layouts must start with this function |
+  | fluidRow() | Creates a row to separate content vertically       |
+  | [column()](https://shiny.rstudio.com/reference/shiny/latest/column.html)   | Passed to fluidRow to separate content horizontally |
+  | [titlePanel()](https://shiny.rstudio.com/reference/shiny/0.14/titlePanel.html)   | Creates a panel containing the application title.  |
+  | [headerPanel()](https://shiny.rstudio.com/reference/shiny/0.11/headerPanel.html)  | Creates a header panel        |
+  | [sidebarLayout()](https://shiny.rstudio.com/reference/shiny/0.14/sidebarLayout.html)| Creates sidebar to add content|
+  | [sidebarPanel()](https://shiny.rstudio.com/reference/shiny/0.14/sidebarPanel.html) | The side Panel argument passed to sidebarLayout()  |
+  | [mainPanel()](https://shiny.rstudio.com/reference/shiny/0.14/mainPanel.html)    | The main Panel argument passed to sidebarLayout()  |
+  | [tabsetPanel()](https://shiny.rstudio.com/reference/shiny/0.14/tabsetPanel.html)  | Creates tabs on which you can add different content|
+  | [tabPanel()](https://shiny.rstudio.com/reference/shiny/0.14/tabPanel.html)     | A tab passed to tabsetPanel() |
+  | [conditionalPanel()](https://shiny.rstudio.com/reference/shiny/0.11/conditionalPanel.html)| Creates a panel which exists when a condition is met |
+  | [navbarPage()](https://shiny.rstudio.com/reference/shiny/1.0.5/navbarPage.html)   | Creates a page with a navigation bar at the top     |
+  | [navlistPanel()](https://shiny.rstudio.com/reference/shiny/latest/navlistPanel.html) | Similar to tabPanel except that navigation is on the left instead of the top|
+  | [wellPanel()](https://shiny.rstudio.com/reference/shiny/0.11/wellPanel.html)| Creates a panel with a slightly inset border and grey background |
+  | [inputPanel()](https://shiny.rstudio.com/reference/shiny/0.11/inputPanel.html) | A flowLayout with a grey border and light grey background|
+  | [absolutePanel()](https://shiny.rstudio.com/reference/shiny/0.12.1/absolutePanel.html) | Creates a panel whose contents are absolutely positioned |
+  | [splitLayout()](https://shiny.rstudio.com/reference/shiny/0.14/splitLayout.html)  | Lays out elements horizontally, dividing the available horizontal space into equal parts (by default)|
+  | [verticalLayout()](https://shiny.rstudio.com/reference/shiny/0.14/verticalLayout.html) | Create a container that includes one or more rows of content (each element passed to the container will appear on it's own line in the UI)|
+| [flowLayout()](https://shiny.rstudio.com/reference/shiny/0.14/flowLayout.html) | Lays out elements in a left-to-right, top-to-bottom arrangement|
 
-|  Shiny UI Functions  |      Description      |
-|:---------------------|:----------------------|
-| fluidPage()| All fluidPage layouts must start with this function.|
-| fluidRow() | Creates a row to separate content vertically.       |
-| column()   | Passed to fluidRow to separate content horizontally.|
-| titlePanel()   | Creates a panel containing the application title.  |
-| headerPanel()  | Creates a header panel        |
-| sidebarLayout()| Creates sidebar to add content|
-| sidebarPanel() | The side Panel argument passed to sidebarLayout()  |
-| mainPanel()    | The main Panel argument passed to sidebarLayout()  |
-| tabsetPanel()  | Creates tabs on which you can add different content|
-| tabPanel()     | A tab passed to tabsetPanel() |
-| conditionalPanel()| Creates a panel which exists when a condition is met.|
-| navbarPage()   | Creates a page with a navigation bar at the top     |
-| navlistPanel() | Similar to tabPanel except that navigation is on the left instead of the top|
 
 <p>
-You can embed cretain functions inside of others, such as tabPanel() inside of tabsetPanel() or the use of mainPanel() and sidebarPanel() inside of sidebarLayout(). And yes, you could even embed sidebarLayout() inside of tabsetPanel()!
+You can embed certain functions inside of others, such as tabPanel() inside of tabsetPanel() or the use of mainPanel() and sidebarPanel() inside of sidebarLayout(). And yes, you could even embed sidebarLayout() inside of tabsetPanel()!
 </p>
 
 #insert examples from rstudio page
