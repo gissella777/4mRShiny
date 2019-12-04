@@ -1,5 +1,10 @@
 ---
-
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'UI.html'))})
+ 
 ---
 <style>
 @import url('https://fonts.googleapis.com/css?family=Scope+One&display=swap');
@@ -11,7 +16,7 @@ h1,h2 {font-family: 'Unica One', cursive;
 p2 {font-family: 'Unica One', cursive;
   font-size: 25px;}       
 p {font-family: 'Open Sans', sans-serif;
-  font-size: 15px;}     
+  font-size: 15px;}   
 </style>
   ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -35,7 +40,7 @@ Before we go into the nitty gritty of a UI (User Interface), let's go through wh
 
 ## UI Structure  
 &nbsp;  
-**Great!** Now that we know why and what a UI is, let's learn how to create one. We're going to start with how to use Shiny function to layout the different sections of an interface (i.e., a header, footer, etc.).  
+**Great!** Now that we know why and what a UI is, let's learn how to create one. We're going to start with how to use Shiny functions to lay out the different sections of an interface (i.e., a header, footer, etc.).  
 &nbsp;  
 
 <center>
@@ -62,20 +67,21 @@ server <- function(input, output){ #empty server function
 <p>So I know what you're wondering, what kind of arguments can I include and what do they do??
   You can include the following argument types:
   <ul>
-  <li>Text Elements</li>
-  <li>Layout Functions (i.e., create a sidebar or header)</li>
-  <li>Static Elements (i.e., logo, graphics, etc.)</li>
+  <li><a href="#targetname">Text Elements</a></li>
+  <li><a href="#targetlayout">Layout Functions (i.e., create a sidebar or header)</a></li>
+  <li><a href="#targetstatic">Static Elements (i.e., logo, graphics, etc.)</a></li>
   <li>HTML/CSS</li>
   <li>Dynamic Inputs (i.e., buttons, sliders, drop-down lists, etc.)</li>
   </ul>
 In this section, we are going to focus on the first 3 elements as they have more of a direct impact on the layout of your app. 
-&nbsp;  
 
-<p2>Text Elements</p2>
+<br>  
+
+<p2><a name="targetname">Text Elements</a></p2>
 
 <p>Text elements refer to any titles, paragraphs, and headers that you may have throughout your app. We're going to start with basic text functions and later replace them with the use of HTML/CSS. This will be especially useful if you decide to include documentation as part of your application.</p>
 
-<p>The following table contains key basic Shiny text functions which you include within the fluidpage(...) function.</p>
+<p>The following table contains key basic Shiny text functions which you would place within the fluidpage(...) function. You can also embed certain functions within others (i.e., italicized text within a first level header).</p>
 
   | Shiny Text Functions | Description |
   |:---------:|:---------:|
@@ -108,11 +114,73 @@ shinyApp(ui = ui, server = server)
 ```
 
 <p>Running the code above produces the following app.</p>
-#insert link to app(not uploaded but has been created)
+
+<center>
+<div style="width:50%; height:30%">
+![](textapp_ex.png)
+</div>
+</center>
+
+<br>
+<p>As you can see, it's fairly straightforward to add text in your interface. Each text function applies the same format assigned to that particular function (i.e., h1 will always produce bold, large text). This is very similar to applying the same formatting to headers in documentation which you find in Microsoft Word.</p>
+<center>
+<div style="width:50%; height:30%">
+![](wordformat.png)
+</div>
+</center>
+<br>
+<p>To create your own text styles, you will learn to use HTML tags later in the training. Don't worry, we will get there!</p>
+<br>
+<style>
+div.blue {background-color:#0f0f4b; border-radius:5px; padding:20px;}
+</style>
+
+<div class="blue">
+<font color="white">
+<img style="width:30px; height:25px" src="whitecomp.png"> <p style="font-size:15px; display:inline;"> Let's have a little fun and practice - Using the commands you've just learned, see if you can create the following app:</p></img>
+
+<div class = "row">
+<div class = "col-md-6">
+![](starsapp_ex.png)
+
+</div>
+<div class = "col-md-6">
+<div id="testing2" style="display:none;">
+```{r eval=FALSE, include=TRUE}
+library(shiny)
+
+ui <- fluidPage(
+  h4(em("A long time ago")), 
+  h2(em("in a galaxy")), 
+  h1(em("far, far away..."))  )
+
+server <- function(input, output) { }
+
+# Run the application 
+shinyApp(ui = ui, server = server)
+```
+</div>
+
+<button onclick="myFunction()"><p style="color:#696969">Click me if you've tried!</p></button>
+
+<p id="demo2"></p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("testing2").innerHTML;
+  document.getElementById("demo2").innerHTML = x;
+}
+</script>
+
+</div>
+</div>
+</font>
+</div>
+<br>
 
 &nbsp;  
 
-<p2>Shiny UI Layout Functions</p2>
+<p2><a name="targetlayout">Shiny UI Layout Functions</a></p2>
 
 <p>The following table contains  the various layout options that you can use. It is not an exhaustive list but does contain the functions you are most likely to need or come across. Non-fluidPage layout options are listed toward the bottom. </p>
   
@@ -162,7 +230,7 @@ In the following section, we'll look at a simplified version of the 4most Econom
 </center>
 &nbsp;    
 
-<p2>Static Elements</p2>
+<p2><a name="targetstatic">Static Elements</a></p2>
 
 <p>asdfadf</p>
 &nbsp;    
