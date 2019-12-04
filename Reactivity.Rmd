@@ -80,7 +80,7 @@ ggplot(mpg, aes(x = displ, y = hwy, color = class)) +
 Now let's take the same dataset and **make it reactive**. We want the graph to react based on the choice of X and Y variable, thereby allowing us to analyse the relationship between more than 1 pair of variables. Go ahead and change the choice of X and Y variables!
 
 <center>
-<iframe src="https://g4most.shinyapps.io/reactgraph/" width="100%" height="500px" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+<iframe src="https://g4most.shinyapps.io/reactgraph/" width="100%" height="525px" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </center>
 
 **Reactive Expressions**
