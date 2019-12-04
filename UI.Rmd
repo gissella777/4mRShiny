@@ -35,7 +35,7 @@ Before we go into the nitty gritty of a UI (User Interface), let's go through wh
 
 ## UI Structure  
 &nbsp;  
-**Great!** Now that we know why and what a UI is, let's learn how to create one.  
+**Great!** Now that we know why and what a UI is, let's learn how to create one. We're going to start with how to use Shiny function to layout the different sections of an interface (i.e., a header, footer, etc.).  
 &nbsp;  
 
 <center>
@@ -52,7 +52,7 @@ In the slides above we covered the various options for how to layout the UI for 
 <p>As mentioned previously, **fluidPage()** is a layout function which defines defines the UI for your app. It will take on arguments as needed (i.e., content) that you may want your layout to contain.</p>
 
 ```{r eval=FALSE}
-#Pseudo code examplf of the fluidPage() layout function taking on 3 arguments
+#Pseudo code example of the fluidPage() layout function taking on 3 arguments
 ui <- fluidPage(argument1, argument2, argument3)
 
 #You can use an 'empty' server to test the layout of your app.
@@ -63,12 +63,56 @@ server <- function(input, output){ #empty server function
   You can include the following argument types:
   <ul>
   <li>Text Elements</li>
-  <li></li>
-  <li>Static Elements</li>
-  <li>HTML</li>
-  <li>Dynamic Inputs</li>
+  <li>Layout Functions (i.e., create a sidebar or header)</li>
+  <li>Static Elements (i.e., logo, graphics, etc.)</li>
+  <li>HTML/CSS</li>
+  <li>Dynamic Inputs (i.e., buttons, sliders, drop-down lists, etc.)</li>
   </ul>
-  In this section, we are going to focus on the first 3 elements as they have more of a direct impact on the layout of your app. 
+In this section, we are going to focus on the first 3 elements as they have more of a direct impact on the layout of your app. 
+&nbsp;  
+
+<p2>Text Elements</p2>
+
+<p>Text elements refer to any titles, paragraphs, and headers that you may have throughout your app. We're going to start with basic text functions and later replace them with the use of HTML/CSS. This will be especially useful if you decide to include documentation as part of your application.</p>
+
+<p>The following table contains key basic Shiny text functions which you include within the fluidpage(...) function.</p>
+
+  | Shiny Text Functions | Description |
+  |:---------:|:---------:|
+  | p("...") | A paragraph of text. |
+  | h1("...") | A first level header |
+  | h2("...") | A second level header |
+  | h3("...") | A third level header |
+  | h4("...") | A fourth level header |
+  | br( ) | A line break (blank line) |
+  | strong("...") | Bold text |
+  | em("...") | Italicized text|
+
+<p>The following code uses the pseudo code we created above and includes text elements as fluidPage( ) arguments.</p>
+```{r eval=FALSE, include=TRUE}
+library(shiny)
+
+ui <- fluidPage(
+      h1("First level title"), #argument 1
+      h2("Second level title"), #argument 2
+      h3("Third level title"),
+      h4("Fourth level title"),
+      h5(em("Fifth level title")), #fifth header level with italicization
+      br(), #line break
+      h6("Sixth level title")    )
+
+server <- function(input, output) { }
+
+# Run the application 
+shinyApp(ui = ui, server = server)
+```
+
+<p>Running the code above produces the following app.</p>
+#insert link to app(not uploaded but has been created)
+
+&nbsp;  
+
+<p2>Shiny UI Layout Functions</p2>
 
 <p>The following table contains  the various layout options that you can use. It is not an exhaustive list but does contain the functions you are most likely to need or come across. Non-fluidPage layout options are listed toward the bottom. </p>
   
@@ -110,12 +154,18 @@ In the following section, we'll look at a simplified version of the 4most Econom
 </p>
 &nbsp;  
 
-<p2>fluidPage(...) using a 4most app</p2>
+<p2>fluidPage(...) example using a 4most app</p2>
 &nbsp;  
 
 <center>
 ![](econapp.png)
 </center>
+&nbsp;    
+
+<p2>Static Elements</p2>
+
+<p>asdfadf</p>
+&nbsp;    
 
 ## UI Practice    
 &nbsp;    

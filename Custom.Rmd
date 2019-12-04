@@ -1,43 +1,71 @@
 ---
-title: "Custom"
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'Custom.html'))})
+ 
 ---
+<style>
+@import url('https://fonts.googleapis.com/css?family=Scope+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Scope+One|Unica+One&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
-```{r setup, include=FALSE}
+h1,h2 {font-family: 'Unica One', cursive;
+  font-size: 25px;}
+p2 {font-family: 'Unica One', cursive;
+  font-size: 25px;}       
+p {font-family: 'Open Sans', sans-serif;
+  font-size: 15px;}     
+</style>
+  ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-&nbsp;  
+&nbsp;    
 
-### So we have created an app. It works and has all the components you need..but it looks a bit...
+
+# Customisation {.tabset .tabset-fade}  
+
+## Intro  
+&nbsp;  
+So we have created an app. It works and has all the components you need..but it still looks a bit...
+
 <center>
 <iframe src="https://giphy.com/embed/11d6avgEFTqmBO" width="200" height="183" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </center>
-### **So what do we do??**
-### We use HTML and CSS! The following section aims to show you how HTML and CSS are used in Shiny and how you can use it without having to become a full-blown website developer.
+<p2>So what do we do??</p2>  
+
+<p>Fortunately we have several options available in Shiny that can change the appear ance of your app. For example: 
+<ul>
+<li>HTML/CSS</li>
+<li>Shiny Themes</li>
+<li>Javascript</li>
+</ul>
+
+Today we're only going to cover the first two options.</p>
+
+## HTML/CSS  
 &nbsp;  
+<p>The following section aims to show you how HTML and CSS are used in Shiny and how you can use it without having to become a full-blown website developer.<p>
 
 <center>
 <iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={efbfce59-1156-4043-87a3-f574f0298761}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
 </center>
 &nbsp;  
 
+<p>If you would like some help in learning how to manipulate text, check out the following shiny App - [Follow this link to open in a separate window.](https://iheart.shinyapps.io/shinyMCE-01-basic/)</p>
 
+<center>
+<iframe width="100%" height="550" src="https://iheart.shinyapps.io/shinyMCE-01-basic/" scrolling= "yes"></iframe>  
+</center>
 
-## R Markdown
+## Shiny Themes
+&nbsp;  
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+Introduce themes
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+## Checkpoint
+&nbsp;  
 
-```{r cars}
-summary(cars)
-```
+Add slide from html section
 
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
