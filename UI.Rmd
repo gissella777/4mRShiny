@@ -427,10 +427,55 @@ Practice your knowledge! For solutions today - ask Gissella or Nir :)
 
 
 ## Design Considerations  
+  
 
-&nbsp;    
-<iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={edb6264a-3bf7-4e09-9c6a-768e6cfb0a1c}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>  
-&nbsp;  
+<img style="width:20%; height:10%; margin:25px 40px;" src="trex1.png"><p style="font-family: 'Unica One', cursive; font-size:30px; display:inline;">UI Design Considerations</p></img>
+<p>The design of how our clients will interact with our output is an issue we don't often come across and so we've included some useful items to consider when designing the layout and general appearance of your Shiny application.</p>
+<br>
+
+<p2>Leverage User Expectations</p2>
+<p>If you were to find yourself lost in London today, you would immediately look for street signs, tube/bus stations or other recognizable landmarks. Similarly, users are accustomed to finding certain signposts on websites in certain areas (i.e., link to home page at the top). Unless you’re asked for something specific from a client, you can you use these expectations as a blueprint for your app. 
+</p>
+<center>
+<div style="width:65%; height:45%">
+![](layout_expect.png)
+</center>
+<br>
+<p>The image above illustrates where users typically go when using a website based on various eye-tracking studies. When looking for the home page, users tend to focus to the top and and to the right. When looking for navigation links, users look to the left or towards the top. Essentially if users have these expectations, make it easy for you and your end-user and don't reinvent the wheel! In other words, don't put navigation links at the bottom of a page.</p>
+<br>
+
+<p2>Visual Hierarchy</p>
+<p>This is essentially the concept of aligning the appearance of your content to how it important it is. This is something we naturally do when writing model documentation - Main Headers are typically the largest, boldest text and sub-headers are in smaller text.</p>
+<center>
+![](hierarchy_img.png)
+</center>
+<br>
+<p>Although the example above uses text, visual hierarchy applies to all content. Try not to display graphs/controls of less importance in the same manner as the more key graphs/controls. The difference will guide the user towards the key components of the app.</p>
+<br><br>
+
+<p2>Clarity & Simplicity</p>
+<p></p>
+<br><br>
+
+<p2>Consistency</p>
+<p></p>
+<br><br>
+
+<p2>Give Feedback</p>
+<p></p>
+<br><br>
+
+<p2>Strategic Use of Color and Texture</p>
+<p></p>
+<br><br>
+
+<p2>Typography</p>
+<p></p>
+<br><br>
+
+
+
+
 
 ## Checkpoint 2
 &nbsp;    
