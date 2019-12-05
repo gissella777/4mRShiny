@@ -1,10 +1,5 @@
 ---
-knit: (function(input_file, encoding) {
-  out_dir <- 'docs';
-  rmarkdown::render(input_file,
- encoding=encoding,
- output_file=file.path(dirname(input_file), out_dir, 'UI.html'))})
- 
+
 ---
 <style>
 @import url('https://fonts.googleapis.com/css?family=Scope+One&display=swap');
@@ -232,7 +227,64 @@ In the following section, we'll look at a simplified version of the 4most Econom
 
 <p2><a name="targetstatic">Static Elements</a></p2>
 
-<p>asdfadf</p>
+<p>Remember that www/ folder we initially created when setting up your working directory? Well, now is when it comes to use! </p>
+```{r eval=FALSE, include=TRUE}
+Folder Structure
+| shinyApp/
+  | ui.R
+  | server.R
+| www/ #Folder in which you place all images and logos you want to embed.
+  | image.png
+```
+
+<p>Once you've placed the image in the www/ folder, you will need to call it from within the layout function/area you want shiny to display it from. As an example, we're going to add an image to the example we previously practiced with (adding text elements): </p>
+
+<center>
+![](starsapp_img.png)
+</center>
+<p>To insert the Star Wars image you see above, you will place the image in the www/ folder and decide where in the app you want to see it. In the example above, I've created a row below the text and inserted the image there as shown in the code:</p>
+
+```{r eval=FALSE, include=TRUE}
+library(shiny)
+
+ui <- fluidPage(
+  h4(em("A long time ago")), 
+  h2(em("in a galaxy")), 
+  h1(em("far, far away...")),
+  fluidRow(img(src="starwars3.jpg")))
+
+server <- function(input, output) { }
+
+# Run the application 
+shinyApp(ui = ui, server = server)
+```
+
+<p>This is **not your only option**. You can also insert images using HTML. We will go further into HTML when we're further along in the training but the following example code demonstrates how we could utilise HTML instead to produce the same app. I've also added a command to center the image in this example:</p>
+
+```{r eval=FALSE, include=TRUE}
+library(shiny)
+
+ui <- fluidPage(
+  h4(em("A long time ago")), 
+  h2(em("in a galaxy")), 
+  h1(em("far, far away...")),
+  HTML('<center><img src="starwars3.jpg"></center>'))
+
+server <- function(input, output) { }
+
+# Run the application 
+shinyApp(ui = ui, server = server)
+```
+<br>
+<style>
+div.blue {background-color:#0f0f4b; border-radius:5px; padding:5px;}
+</style>
+
+<div class="blue">
+<font color="white">
+<center><img style="width:30px; height:25px" src="whitecomp.png"> <p style="font-size:15px; display:inline;"> Time to think about your app!</p></img></center><br>
+<center><p>Are there any images or logos you would like to include? In which section of your app are planning to place them in?</p></center>
+
 &nbsp;    
 
 ## UI Practice    
