@@ -203,13 +203,126 @@ function myFunction() {
 
 
 <p>
-You can embed certain functions inside of others, such as tabPanel() inside of tabsetPanel() or the use of mainPanel() and sidebarPanel() inside of sidebarLayout(). And yes, you could even embed sidebarLayout() inside of tabsetPanel()!
+You can embed certain functions inside of others, such as tabPanel( ) inside of tabsetPanel( ) or the use of sidebarPanel( ) inside of sidebarLayout( ). And yes, you could even embed sidebarLayout( ) inside of tabsetPanel( )! Just remember to separate each of these functions with a comma.
 </p>
 
-#insert examples from rstudio page
-#add links to documentation in table above
+<p>Today, we will build two fairly basic, but common layouts - the Sidebar Layout and an application using tabs.We will also quickly cover a simple example using fluidRow. Let's start with the Sidebar Layout:</p>
+<center>
+![](tabapp_ex.png)
+</center>
+<br>
+<p>The code below produces the app. I've included some code that you will not understand until we go through control widgets but is there so you can view the layout.</p>
 
+```{r eval=FALSE, include=TRUE}
+library(shiny)
+library(datasets)
+data("faithful") #in build dataset
 
+#Sidebar Layout 
+ui <- fluidPage( #All layout functions are held here
+  titlePanel("Hello 4most!"),
+  sidebarLayout(
+    sidebarPanel( #sidebarPanel feed into the sidebarLayout
+      # Input: Slider for the number of bins - Not expected to know this yet
+      sliderInput(inputId = "bins",
+                  label = "Number of bins:",
+                  min = 1, max = 50, value = 30) ),
+    mainPanel( #mainPanel to the right of the sidebarPanel 
+      #displays output - Not expected to know this yet
+      plotOutput(outputID="distplot") )
+  )
+)
+
+server <- function(input, output) {
+  # Histogram of the Old Faithful Geyser Data - Not expected to know this yet
+    output$distPlot <- renderPlot({
+      x    <- faithful$waiting
+      bins <- seq(min(x), max(x), length.out = input$bins + 1)
+      hist(x, breaks = bins, col = "#75AADB", border = "white",
+           xlab = "Waiting time to next eruption (in mins)",
+           main = "Histogram of waiting times")})
+}
+
+# Run the application 
+shinyApp(ui = ui, server = server)
+```
+<br>
+<p>Now let's create an application with a sidebar and content on different tabs!</p>
+
+<center>
+![](acttab_ex.png)
+</center>
+<br>
+<p>As above, there are control widgets that we've not covered yet and are included for illustration purposes</p>
+```{r eval=FALSE, include=TRUE}
+library(shiny)
+
+ui <- fluidPage(
+  br(), #included for some vertical space at the top
+  sidebarLayout( #holds sidebarPanel and mainPanel
+    sidebarPanel(
+        radioButtons("dist", "Distribution type:",
+                     c("Normal" = "norm", "Uniform" = "unif",
+                       "Log-normal" = "lnorm", "Exponential" = "exp")),
+        br(),
+        sliderInput("n", "Number of observations:",
+                    value = 500, min = 1, max = 1000)
+    ),
+    mainPanel( #Place the tabs within the main panel
+      tabsetPanel(type = "tabs",
+                  tabPanel("Plot", plotOutput("plot")), #First tab and content
+                  tabPanel("Summary", verbatimTextOutput("summary")), #Second tab
+                  tabPanel("Table", tableOutput("table")) # Third tab and content
+      ))
+  ))
+
+server <- function(input, output) {
+  # Reactive expression to generate the requested distribution ----
+  d <- reactive({
+        dist <- switch(input$dist,
+                       norm = rnorm, unif = runif,
+                       lnorm = rlnorm, exp = rexp, rnorm)
+        dist(input$n) })
+  
+  # Generate a plot of the data - Displayed on first tab
+  output$plot <- renderPlot({
+        dist <- input$dist
+        n <- input$n
+        hist(d(), main = paste("r", dist, "(", n, ")", sep = ""),
+                  col = "#75AADB", border = "white") })
+  
+  # Generate a summary of the data - Displayed on second tab
+  output$summary <- renderPrint({ summary(d()) })
+  
+  # Generate an HTML table view of the data - Displayed on third tab
+  output$table <- renderTable({  d() })
+}
+
+shinyApp(ui, server)
+```
+<br>
+<p>The next example covers the use of fluidRow( ). fluidRow can include further layout functions (such as column as illustrated below) or specific content that you want to lay within the same row. Content outside of fluidRow( ) will fall in a different vertical space. For example, the titlePanel( ) containing "Hello 4most!" is outside of fluidRow( ) and therefore the content is not on the same row as the text and 4most logo:</p>
+<center>
+![](fluidRow_ex.png)
+</center>
+<br>
+```{r eval=FALSE, include=TRUE}
+library(shiny)
+
+#Sidebar Layout
+ui <- fluidPage(
+  titlePanel("Hello 4most!"),
+  fluidRow( #Insert 3 columns adding up to the 12 unit width used in fluidPage()
+    column(3, h1("Column Width 3")), #This column (width=3)can remain empty for empty space
+    column(6, img(src="4Most.png", height = 100, width = 100, align ="left")),
+    column(3, h1("Column Width 3")) #Third column with width 3
+  )
+)
+
+server <- function(input, output) {
+  #Empty for this example }  
+shinyApp(ui = ui, server = server)
+```
 &nbsp; 
 
 <p>
@@ -219,10 +332,27 @@ In the following section, we'll look at a simplified version of the 4most Econom
 
 <p2>fluidPage(...) example using a 4most app</p2>
 &nbsp;  
-
+<p>Below is a screenshot of a simplified version of the 4most Economic Model tool. We Let's break down it's components and see how we can build the layout with the knowledge we've gained so far.</p>
+#waiting to hear back from Fraser 
 <center>
 ![](econapp.png)
 </center>
+
+<p> </p>
+
+```{r eval=FALSE, include=TRUE}
+library(shiny)
+
+ui <- fluidPage(
+      titlePanel(title="4Most", windowTitle="4Most - Economic Model")),
+  h2(em("in a galaxy")), 
+  h1(em("far, far away..."))  )
+
+server <- function(input, output) { }
+
+# Run the application 
+shinyApp(ui = ui, server = server)
+```
 &nbsp;    
 
 <p2><a name="targetstatic">Static Elements</a></p2>
