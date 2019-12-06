@@ -330,29 +330,20 @@ In the following section, we'll look at a simplified version of the 4most Econom
 </p>
 &nbsp;  
 
-<p2>fluidPage(...) example using a 4most app</p2>
+<p2>shinyDashboard with Eduardo</p2>
 &nbsp;  
-<p>Below is a screenshot of a simplified version of the 4most Economic Model tool. We Let's break down it's components and see how we can build the layout with the knowledge we've gained so far.</p>
-#waiting to hear back from Fraser 
+<p>Below we've embedded a Shiny app built by our very own Eduardo Cortes which illustrates the use of shinyDashboard - an alternative to using fluidPage( ). Depending on the motivation behind your app, using shinyDashboard may make more sense.[Right click to open separately](https://eduardo2c.shinyapps.io/analytics_summit/)</p>
+
 <center>
-![](econapp.png)
+<iframe width="100%" height="550" src="https://eduardo2c.shinyapps.io/analytics_summit/" scrolling= "yes"></iframe>
+</center> 
+
+<p>Let's walk through the creation of the app with Eduardo:</p>
+
+<center>
+<iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={627d0bd9-2c0c-4e3a-99a5-b8cc04c8c98a}&amp;action=embedview&amp;wdAr=1.7777777777777777" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
 </center>
 
-<p> </p>
-
-```{r eval=FALSE, include=TRUE}
-library(shiny)
-
-ui <- fluidPage(
-      titlePanel(title="4Most", windowTitle="4Most - Economic Model")),
-  h2(em("in a galaxy")), 
-  h1(em("far, far away..."))  )
-
-server <- function(input, output) { }
-
-# Run the application 
-shinyApp(ui = ui, server = server)
-```
 &nbsp;    
 
 <p2><a name="targetstatic">Static Elements</a></p2>
@@ -441,40 +432,34 @@ Practice your knowledge! For solutions today - ask Gissella or Nir :)
 ![](layout_expect.png)
 </center>
 <br>
-<p>The image above illustrates where users typically go when using a website based on various eye-tracking studies. When looking for the home page, users tend to focus to the top and and to the right. When looking for navigation links, users look to the left or towards the top. Essentially if users have these expectations, make it easy for you and your end-user and don't reinvent the wheel! In other words, don't put navigation links at the bottom of a page.</p>
+<p>The image above illustrates where users typically go when using a website based on various eye-tracking studies. When looking for the home page, users tend to focus to the top and and to the right. When looking for navigation links, users look to the left or towards the top. Essentially if users have these expectations, make it easy for you and your end-user and don't reinvent the wheel!</p>
 <br>
 
-<p2>Visual Hierarchy</p>
+<p2>Visual Hierarchy</p2>
 <p>This is essentially the concept of aligning the appearance of your content to how it important it is. This is something we naturally do when writing model documentation - Main Headers are typically the largest, boldest text and sub-headers are in smaller text.</p>
 <center>
 ![](hierarchy_img.png)
 </center>
 <br>
 <p>Although the example above uses text, visual hierarchy applies to all content. Try not to display graphs/controls of less importance in the same manner as the more key graphs/controls. The difference will guide the user towards the key components of the app.</p>
-<br><br>
+<br>
 
-<p2>Clarity & Simplicity</p>
-<p></p>
-<br><br>
+<p2>Clarity & Simplicity</p2>
 
-<p2>Consistency</p>
-<p></p>
-<br><br>
+<ul>
+<li><p>Clarity, in this context, is the idea that your end-user should know what to do at all times and not be left wondering how to work through your app. Keep in mind that lack of clarity can stem from both too little or too much information so take a step back and see where you can clean up or add content.</p></li>
+<li><p>Users expect interactive elements to be placed near the object they wish to control (i.e., submit button right below a form rather than set at the top of a page).If you want your user to be able to manipulate a certain graph, ensure that the options, such as a drop-down list, are near to the graph they will be changing.</p></li>
+<li><p>Ensure interface elements (i.e., buttons) have a clear meaning if you decide to use graphic elements. For instance, using a house graphic for the home page if fairly clear rather than using a box.</p></li>
+<li><p>Defaults - most people never reset default settings. We still see plenty of people using the default display in SAS despite display settings that are easier on the eyes. With this in mind, ensure that any default settings you include (i.e., sample sizes, where sliders start and end, etc.) are useful and make sense in the context you're using them in.</p></li></ul>
+<br>
 
-<p2>Give Feedback</p>
-<p></p>
-<br><br>
+<p2>Consistency</p2>
+<p>You should ensure that graphics, terminology and formatting are consistent throughout the app and not simply consistent in one sectio of the app. An icon should represent the same thing throughout the app and not multiple different concepts that are dependent on context (i.e., don't use a home icon to mean home page and go to the top of a section - one or the other, not both). Dates should be in the same format from one tab to another. Color palette choice, unless for a specific reason, should also be consistent to ensure a professional appearance.</p>
+<br>
 
-<p2>Strategic Use of Color and Texture</p>
-<p></p>
-<br><br>
-
-<p2>Typography</p>
-<p></p>
-<br><br>
-
-
-
+<p2>Give Feedback</p2>
+<p>Your end user should always know what is going on - If you press a button, how do you know if something is actually happening or if the action is broken? Always supply a visible way of displaying this. For instance, a rolling button or a message(i.e., "Model processing").  </p>
+<br>
 
 
 ## Checkpoint 2
@@ -484,5 +469,10 @@ Time for the next step in creating our app today:
 
 <iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={d0742f79-f991-4f49-969e-18c4ed484796}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
 &nbsp;  
+<p2>Wireframing</p2>
 
+<p>The following website is a free resources that allows you to draft the layout to a website/application. [Click on me to open](http://framebox.org/) </p>
+<center>
+<iframe width="100%" height="550" src="http://framebox.org/" scrolling= "yes"></iframe>
+</center> 
 
