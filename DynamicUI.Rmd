@@ -7,9 +7,11 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 h1,h2 {font-family: 'Unica One', cursive;
-      font-size: 25px;}
+  font-size: 25px;}
+p2 {font-family: 'Unica One', cursive;
+  font-size: 25px;}       
 p {font-family: 'Open Sans', sans-serif;
-      font-size: 14px;}      
+  font-size: 15px;}   
 </style>
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -21,20 +23,71 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Intro to Dynamic UIs
 &nbsp;  
-Using what you know about reactivity, learn how to make your UI dynamic!
-&nbsp;  
+<p>Using what you know about reactivity, learn how to make your UI dynamic! A dynamic UI is for when we want to add, remove or change the currently loaded widets based on the dynamic changes or user input. For instance: </p>
+<ul>
+<li><p>Display certain parts of the user interface if a certain condition is met </p></li>
+<li><p>Display or hide aparts of the user interface when a certain condition is met</p></li>
+<li><p>Modify the parameters of input control widgets.</p></li>
+</ul>  
+
+<p>**Let's go through these key UI changes in the tabs above.**</p>
+<br>
+
+<p2>Dynamic UI Example</p2>
+<p>Still wondering what we're on about? Check out the following example and read through the subsequent code. The app displays a graph when a particular dataset is chosen:</p>
 
 <center>
-<iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={65a04ed4-fc44-45f0-90a0-1fdd9c4b18b2}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
-</center>
-&nbsp;  
+<iframe width="100%" height="475" src="https://g4most.shinyapps.io/dynamic_ex/" scrolling= "yes"></iframe>  
+</center>  
+<br>
+```{r eval=FALSE, include=TRUE}
+library(shiny)
+library(datasets)
+
+ui<-fluidPage(
+  selectInput("data_input",label="Select data", 
+              choices=c("mtcars","faithful","iris")), #dataset choices
+  tableOutput("table_output"),
+  uiOutput("ui")
+)
+
+server<-function(input,output) {
+  getdata <- reactive({ get(input$data_input, 'package:datasets') })
+  
+  output$ui <- renderUI({
+    #if the dataset is 'iris', display 'plot_output'
+    if(input$data_input=="iris") plotOutput("plot_output",width="400px")
+  })
+  
+  output$plot_output <- renderPlot({hist(getdata()[, 1])})
+  output$table_output <- renderTable({head(getdata())})
+}
+
+shinyApp(ui = ui, server = server)
+
+```
 
 
-## Examples  
+## Updating Inputs
 &nbsp;  
 in code add example of static vs. dynamic first  
 
 add example of code + ui changing
+
+
+## Dynamic Visibility
+&nbsp;  
+in code add example of static vs. dynamic first  
+
+add example of code + ui changing
+
+
+## Creating UI
+&nbsp;  
+in code add example of static vs. dynamic first  
+
+add example of code + ui changing
+
 
 ## Checkpoint 5
 &nbsp;  
