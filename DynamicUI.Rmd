@@ -1,5 +1,9 @@
 ---
-
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'DynamicUI.html'))})
 ---
 <style>
 @import url('https://fonts.googleapis.com/css?family=Scope+One&display=swap');
@@ -79,8 +83,8 @@ shinyApp(ui = ui, server = server)
 <br>
 <p2>The How?</p2>
 <p>
-Each control widget, such as `numericInput( )`, has a corresponding **update** counterpart, such as `updateNumericInput( )` that is used to create the dynamic behaviour described above. Whilst fairly similar to the original function, you will need to include an extra argument `session` to the update and will also use the name of the input as the second argument.</p>
-<p>We're not goint to list every single update version of each control widget but feel free to checkout the following:</p>
+Each control widget, such as `numericInput( )`, has a corresponding **update** counterpart, such as `updateNumericInput( )` that is used to create the dynamic behaviour described above. Whilst fairly similar to the original function, you will need to include an extra argument `session` to the update and will also use the name of the first input as the second argument. The update logic does sit in the Server script.</p>
+<p>We're not going to list every single update version of each control widget but feel free to checkout the following:</p>
 <ul>
 <li><p>[updateSelectInput( ) online documentation](https://shiny.rstudio.com/reference/shiny/1.2.0/updateSelectInput.html)</p></li>
 <li><p>[updateCheckboxGroup( ) online documentation](https://shiny.rstudio.com/reference/shiny/1.2.0/updateCheckboxGroupInput.html)</p></li>
@@ -90,7 +94,7 @@ Each control widget, such as `numericInput( )`, has a corresponding **update** c
 
 <p2>Example 1: Updating Inputs (Dataset Example)</p2>
 <br>
-<p>In the example below, we are going to solve the scenario we first mentioned - producing a drop-down list of variable names that changes based on the input dataset chosen. </p>
+<p>In the example below, we are going to solve the scenario we first mentioned - producing a drop-down list of variable names that changes based on the input dataset chosen. Read through the code to understand how the update version of a control widget functions.</p>
 
 ```{r eval=FALSE, include=TRUE}
 library(shiny)
