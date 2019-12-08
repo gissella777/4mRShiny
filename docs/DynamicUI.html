@@ -657,10 +657,10 @@ Consider the following possibility -&gt; You’ve created an input widget listin
 <p>
 <br> <p2>The How?</p2>
 <p>
-Each control widget, such as <code>numericInput( )</code>, has a corresponding <strong>update</strong> counterpart, such as <code>updateNumericInput( )</code> that is used to create the dynamic behaviour described above. Whilst fairly similar to the original function, you will need to include an extra argument <code>session</code> to the update and will also use the name of the input as the second argument.
+Each control widget, such as <code>numericInput( )</code>, has a corresponding <strong>update</strong> counterpart, such as <code>updateNumericInput( )</code> that is used to create the dynamic behaviour described above. Whilst fairly similar to the original function, you will need to include an extra argument <code>session</code> to the update and will also use the name of the first input as the second argument. The update logic does sit in the Server script.
 </p>
 <p>
-We’re not goint to list every single update version of each control widget but feel free to checkout the following:
+We’re not going to list every single update version of each control widget but feel free to checkout the following:
 </p>
 <ul>
 <li>
@@ -682,7 +682,7 @@ We’re not goint to list every single update version of each control widget but
 <p><br></p>
 <p2>Example 1: Updating Inputs (Dataset Example)</p2> <br>
 <p>
-In the example below, we are going to solve the scenario we first mentioned - producing a drop-down list of variable names that changes based on the input dataset chosen.
+In the example below, we are going to solve the scenario we first mentioned - producing a drop-down list of variable names that changes based on the input dataset chosen. Read through the code to understand how the update version of a control widget functions.
 </p>
 <pre class="r"><code>library(shiny)
 library(datasets)
