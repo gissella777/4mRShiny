@@ -29,7 +29,7 @@ knitr::opts_chunk$set(echo = TRUE)
 <li><p>Display or hide aparts of the user interface when a certain condition is met</p></li>
 <li><p>Modify the parameters of input control widgets.</p></li>
 </ul>  
-
+<p>Keep the following shiny functions in mind: `conditionalPanel( )`, `uiOutput( )/renderUI( )`, `insertUI( )` or `removeUI`.</p>
 <p>**Let's go through these key UI changes in the tabs above.**</p>
 <br>
 
@@ -69,24 +69,27 @@ shinyApp(ui = ui, server = server)
 
 
 ## Updating Inputs
-&nbsp;  
-in code add example of static vs. dynamic first  
+&nbsp;
 
-add example of code + ui changing
+<p2>Modifying Inputs</p2>
+<br><br>
+<p>This topic refers to modifying an input *after* it has already been created.</p>
 
 
 ## Dynamic Visibility
 &nbsp;  
-in code add example of static vs. dynamic first  
 
-add example of code + ui changing
+<p2>Selective display of the UI</p2>
+<br><br>
+<p>This next topic is all about how to selectively show or hide certain parts of the UI.</p>
 
 
 ## Creating UI
 &nbsp;  
-in code add example of static vs. dynamic first  
 
-add example of code + ui changing
+<p2>Selective display of the UI</p2>
+<br><br>
+<p>This next topic is all about how to selectively show or hide certain parts of the UI.</p>
 
 
 ## Checkpoint 5

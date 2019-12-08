@@ -35,8 +35,6 @@ navbar:
           href: Custom.html
         - text: "Dashboards"
           href: Dashboards.html
-        - text: "Shiny Extensions"
-          href: Extensions.html
     - text: "Shiny Core 3"
       href: Core3.html
       menu:

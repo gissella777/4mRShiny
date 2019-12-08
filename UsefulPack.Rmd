@@ -131,5 +131,10 @@ scatterplot3js(x,y,z, color=rainbow(length(z)))
 ```
 
 
+## Example of integrating d3.js in R (Use of r2d3)
+&nbsp;  
 
+<center>
+<iframe width="100%" height="700" src="http://www.r2d3.us/visual-intro-to-machine-learning-part-1/" frameborder="1" allowfullscreen></iframe>
+</center>
 
