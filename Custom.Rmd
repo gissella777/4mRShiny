@@ -1,10 +1,5 @@
 ---
-knit: (function(input_file, encoding) {
-  out_dir <- 'docs';
-  rmarkdown::render(input_file,
- encoding=encoding,
- output_file=file.path(dirname(input_file), out_dir, 'Custom.html'))})
- 
+
 ---
 <style>
 @import url('https://fonts.googleapis.com/css?family=Scope+One&display=swap');
@@ -64,8 +59,11 @@ Today we're only going to cover the first two options.</p>
 
 Introduce themes
 
-## Checkpoint
+## Checkpoint 8
 &nbsp;  
 
-Add slide from html section
+<center>
+![](custom_checkpoint6.png)
+</center>
 
+&nbsp;  

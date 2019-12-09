@@ -65,7 +65,10 @@ Practice problems
 ## Checkpoint 3
 
 &nbsp;  
-Add checkpoint 
+<center>
+![](input_checkpoint.png)
+</center>
+&nbsp;  
 
 ## Advanced Widgets
 
