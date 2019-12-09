@@ -744,14 +744,147 @@ server &lt;- function(input, output, session) {
 <iframe width="100%" height="475" src="https://hadley.shinyapps.io/ms-update-basics/" scrolling="yes">
 </iframe>
 </center>
+<p2>Exercise Time!</p2> <br>
+<p>
+You have the following code in your server - A slider widget affects what value is shown in the numericInput widget (box with numeric value).</p2>
+<p>
+What would you write in the server to update the widget?
+</p>
+<pre class="r"><code>ui&lt;-fluidPage(
+  fluidRow(
+    column(3, wellPanel(
+      h4(&quot;This input control needs to change the next input control&quot;),
+      sliderInput(&quot;control_num&quot;, #Input ID for widget 1
+                  &quot;This controls values:&quot;, 
+                  min = 1, max = 20, value = 15) #Settings for input control
+    )),
+    column(3, wellPanel(
+      #Need to update the values of this control (box displaying values from widget 1)
+      numericInput(&quot;inNumber&quot;,  #Input ID for widget 2
+                  &quot;Number input:&quot;,
+                   min = 1, max = 20, value = 5, step = 0.5)) #Initial settings
+    )))</code></pre>
+<br>
+<div id="testing2" style="display:none;">
+<pre class="r"><code>function(input, output, clientData, session) {
+  observe({
+    c_num &lt;- input$control_num #For simplicity but you can use input$control_num
+    updateNumericInput(session, &quot;inNumber&quot;, value = c_num)
+  })
+}</code></pre>
+</div>
+<button onclick="myFunction()">
+<p style="color:#696969">
+Only me if you’ve tried!
+</p>
+</button>
+<p id="demo2">
+</p>
+<br>
+<script>
+function myFunction() {
+  var x = document.getElementById("testing2").innerHTML;
+  document.getElementById("demo2").innerHTML = x;
+}
+</script>
 </div>
 <div id="dynamic-visibility" class="section level2">
 <h2>Dynamic Visibility</h2>
 <p> </p>
 <p2>Selective display of the UI</p2> <br><br>
 <p>
-This next topic is all about how to selectively show or hide certain parts of the UI.
+This next topic is all about how to selectively show or hide certain parts of the UI. We will use Hadley Wickham’s example to illustrate how this works in 2 key examples.
 </p>
+<blockquote>
+<p>Consider the following first scenario:</p>
+<blockquote>
+<p>You have 1 sidePanel with a control widget and 3 tabPanels with different content on each tab. The control widget determines which tab and, by extension, what content is displayed on the mainPanel. How can we make this happen?</p>
+</blockquote>
+</blockquote>
+<p>
+To illustrate:
+</p>
+<center>
+<iframe width="100%" height="400" src="https://hadley.shinyapps.io/ms-dynamic-panels" scrolling="yes">
+</iframe>
+</center>
+<p><br></p>
+<p>
+In order for this to work, you will need the following CSS code - <code>&quot;#g_SWITCH { display:none; }&quot;</code>. It is not necessary for you to know how this works quite yet - Just know that it applies a style (do not display) to the tabsetPanel.
+</p>
+<pre class="r"><code>ui &lt;- fluidPage(
+  tags$style(&quot;#g_SWITCH { display:none; }&quot;), #Hides tabs not selected.
+  #The hash is followed by the input ID your&#39;re applying the code to. 
+  #Do not touch the rest of the CSS code.
+  sidebarLayout(
+    sidebarPanel(
+      #Widget 1 -&gt; 3 options using the IDs identifying the 3 tabs
+      selectInput(&quot;controller&quot;, #Widget ID
+                  &quot;Show&quot;, 
+                  #Choice of 3 tabs, added &quot;panel&quot; to match input IDs below
+                  choices = paste0(&quot;panel&quot;, 1:3))
+    ),
+    mainPanel( #Not a widget but can still be used as an input function
+      tabsetPanel(
+        id = &quot;g_SWITCH&quot;, #Input ID
+        #Following are 3 tabs with content (only text in this instance)
+        #Content will be displayed based on the choice of panel in widget 1
+        tabPanel(&quot;panel1&quot;,           #Input ID for tab 1
+                 &quot;Panel 1 content&quot;), #Content for tab 1
+        tabPanel(&quot;panel2&quot;,           #Input ID for tab 2
+                 &quot;Panel 2 content&quot;), #Content for tab 2
+        tabPanel(&quot;panel3&quot;,           #Input ID for tab 3
+                 &quot;Panel 3 content&quot;)  #Content for tab 3
+      ))
+  ))
+
+server &lt;- function(input, output, session) {
+  observeEvent(input$controller, {
+    updateTabsetPanel(session, 
+                      &quot;g_SWITCH&quot;, #Update the tabsetPanel with ID &#39;g_SWITCH&#39;
+                      selected = input$controller) 
+                      #The tab chosen is dictated by which choice in widget 1 was selected
+  })}</code></pre>
+<p><br></p>
+<p2>Displaying New Control Widgets</p2> <br><br>
+<p>
+Unlike the example in the previous tab (Updating Widgets), this topic is about displaying different types of control widgets based on whatever input you may have chosen.
+</p>
+<blockquote>
+<p>Consider the second scenario:</p>
+<blockquote>
+<p>
+You have one datset but would like to apply different statistical models and potentially evaluate their accuracy using different metrics. However, you don’t want to create an app for each type of model that you would like to run and you don’t want to create a visible tab for each model. Not only do you want to run different types of models, but each type of model will also need different controls. For instance:
+</p>
+<ul>
+<li>
+<p>
+A Decision Tree model can be constrained by limiting the maximum depth and the minimum number of observations needed for a split.
+</p>
+</li>
+<li>
+<p>
+What about running Logistic Regression on the same sample but wanting to use an L1 rather than an L2 penalty?
+</p>
+</li>
+<li>
+<p>
+A KNN model can be tuned by determining how many neighbours you’re looking at.
+</p>
+</li>
+</ul>
+<p>Each of these models would have different parameters that a user may want to change. How do we make this happen?</p>
+</blockquote>
+</blockquote>
+<p>
+To illustrate what you could potentially do, we’re going to use Hadley Wickham’s following example because even a simple example can get complex quickly.
+</p>
+<center>
+<iframe width="100%" height="450" src="https://hadley.shinyapps.io/ms-dynamic-conditional/" scrolling="yes">
+</iframe>
+</center>
+<p><br></p>
+<pre class="r"><code>#code</code></pre>
 </div>
 <div id="creating-ui" class="section level2">
 <h2>Creating UI</h2>
