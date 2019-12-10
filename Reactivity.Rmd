@@ -1,5 +1,5 @@
 ---
- 
+
 ---
 <style>
 @import url('https://fonts.googleapis.com/css?family=Scope+One&display=swap');
@@ -146,8 +146,60 @@ In the section 'Dynamic UIs', we'll cover how to update the UI itself (i.e., whi
 &nbsp;  
 
 ## Compare to Observe
+&nbsp;  
 
-skldfj;ak
+<p2>Extending Reactivity</p2>
+&nbsp;  
+
+<p>We have just shown how a reactive expression, is a function that returns a result and so can form a link in the chain between inputs and displayed output, in an efficient ‘lazily evaluated’ way. However, sometimes we want what computer scientist's call a 'side effect'.
+The function is not run to produce some data result per se, but rather to achieve some other effect. Examples:</p> 
+<ul><li><p>Send some data to a printer</p></li>
+<li><p>Save data to disk</p></li>
+<li><p>Show a pop up notification message to the screen</p></li>
+<li><p>toggle a javascript class</p></li>
+<li><p>update a shiny UI input even! ...etc etc.</p></li>
+</ul>
+<br>
+<p>There are two flavours to ‘Observe’: `observe( )` and `observeEvent( )`.</p>
+<p>The difference is that `observe( )` will re-trigger/run when any reactive within it receives a new value, `observeEvent( )`, will only trigger from the reactive value passed at the first parameter. Here we show an example where `observeEvent( )` is used to update a `pickerInput()`'s choices: </p>
+
+```{r eval=FALSE, include=TRUE}
+library(shiny)
+library(shinyWidgets)
+library(tidyverse)
+
+ui<- fluidPage(
+        pickerInput(inputId = "ds_picker",
+                    label = "DataSet Picker",
+                    choices = c("","iris","mtcars"),
+                    selected = ""),
+        pickerInput(inputId = "var_picker",
+                    label = "Variable Picker",
+                    choices = NULL #don't know the variables until runtime)
+      )
+
+server<-function(input,output,session){
+  
+    observeEvent(input$ds_picker, {
+      if(input$ds_picker=="") return (NULL)
+
+      cat("\n input$ds_picker value is ", input$ds_picker)
+  
+      loaded_data <- get(input$ds_picker)
+  
+      var_picker_choices <- colnames(loaded_data)
+  
+      updatePickerInput(session = session,
+                        inputId = "var_picker",
+                        choices = var_picker_choices,
+                        selected = var_picker_choices[[1]])
+    })}
+
+shinyApp(ui, server)
+```
+
+
+
 
 ## Practice
 
