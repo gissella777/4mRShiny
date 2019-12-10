@@ -1,44 +1,54 @@
 ---
-title: "Debugging"
----
 
+---
+<style>
+@import url('https://fonts.googleapis.com/css?family=Scope+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Scope+One|Unica+One&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+h1,h2 {font-family: 'Unica One', cursive;
+      font-size: 25px;}
+p2 {font-family: 'Unica One', cursive;
+      font-size: 25px;}       
+p {font-family: 'Open Sans', sans-serif;
+      font-size: 15px;}      
+</style>
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+&nbsp;    
+
+
+<p2>Debugging</p2>
 &nbsp;  
-If we're incredibly lucky, everything works the first time and we have no errors. If so, we can dance...
-<center>
+
+<p>If we're incredibly lucky, everything works the first time and we have no errors. If so, we can do a little dance...</p>
 <br>
+<center>
 <div style="width:35%; height:35%">
 ![](carlton.gif)
 </div>
 </center>
-&nbsp;
+<br>
 
-But let's get back to reality because the sad truth is that you will experience errors that will make you crazy! With this in mind, this section will address debugging.
-&nbsp;
+<p>But let's get back to reality because the sad truth is that you will experience errors that will make you crazy! With this in mind, this section will address debugging.</p>
 
-<center>
-<iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={6f4c69c7-db05-459d-bb27-41135e1e7492}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
-</center>  
-&nbsp;  
 
-## R Markdown
+<p2>Debugging:</p2>
+<br>
+<ul>
+<li>`rlang::last_error( )`<p>: calling this provides a simplified stack trace that can often shine a light on where/why the error occurred </p></li>
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+<li>`rlang::last_trace( )`<p>: calling this provides a more complete stack trace that can often shine a light on where/why the error occurred </p></li>
+</ul>
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+<p>To run your code in a ‘debug mode’ where you want to examine a traditional R function you can use `debug(nameofyourfunction)` to have Rstudio stop on entering the function and allow you to stepthrough the code while checking objects in the environment and even running new codes via the console. Use `undebug` to remove the debugmode.</p>
+<p>For a reactive piece of shiny code, similarly debug and step through features are available via using the `brower( )` function at an arbitrary line of your code. When RStudio gets to this line it will enter the debug mode.</p>
+<br>
+<p2>`reprex`, for {rep}roducible {ex}ample:</p2>
+<br>
+<p>Reprex is a package that makes it easy to translate R code into paste-able code appropriate for posting to help-oriented-message-boards such as stack-overflow, rstudio community etc.</p>
+<p>The exercise of preparing a reproducible example, can itself cause a developer to figure out their issue, and often times they will find that they don’t need to share their example as they will have solved their own challenge.</p>
+<p>The principles to consider are to provide a SMALL sample data (that is not confidential and so is safe to share) that is the minimum to demonstrate the problem, and construct the example so as to contain the least code (throw out all irrelevant aspects), to narrowly focus on as simple a case that still reproduces ones issue.</p>
+<p>A package that can provide help in this related area is ‘datapasta’ which has convenience functions for copy-pasting vector, or tabular data, as code.</p>
 
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

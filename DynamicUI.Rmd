@@ -1,5 +1,9 @@
 ---
-
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'DynamicUI.html'))})
 ---
 <style>
 @import url('https://fonts.googleapis.com/css?family=Scope+One&display=swap');
@@ -281,10 +285,32 @@ server <- function(input, output, session) {
 ```{r eval=FALSE, include=TRUE}
 
 #code
+
+
+
+
 ```
-
-
+<br>
 
 
 
 ## Creating UI 
+&nbsp;  
+
+<p2>Selective display of the UI</p2>
+<br><br>
+<p>
+This next topic is all about how to selectively show or hide certain parts of the UI.
+</p>
+
+<br>
+
+## Checkpoint 5
+&nbsp;  
+
+<center>
+![]()
+</center>
+<br>
+
+
