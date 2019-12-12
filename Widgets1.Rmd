@@ -22,24 +22,35 @@ knitr::opts_chunk$set(echo = TRUE)
 # Inputs & Outputs {.tabset .tabset-fade}  
 
 ## Intro  
-
 &nbsp;  
 Ok, we know where to place things and where to tell them what to do - but what can we put in an app??
 &nbsp; 
 
 <center>
-<iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={57513390-37f3-4db5-9506-ce8fbb21048e}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
-</center>
-
+![](Widgets_1.png)
 &nbsp; 
+<br>
 
-GISSELLA NOTE: IT MAY MAKE MORE SENSE TO PULL THIS CONTENT OUT OF SLIDES.  
-&nbsp;   
+<p2>What are Widgets?</p2>
+<br>
+<p>A widget is a web element that you can interact with. If you’ve used the internet, you’ve used a widget!<.p>
+
+<p>Widgets will allow you or your users to send requests to the Shiny app. A widget will collect the request whether it’s a value, string, or chosen from a list. When the widget is changed, the output will also change. </p>
+
+<p>The widgets shown here are the 13 pre-built widgets that come with Shiny:</p>
+<br>
+<center>
+![](control_widgets1.png)
+</center>
+<br>
 
 ## Widgets 101
-
 &nbsp;  
-Delve in deeper (coding part) - also mention widget gallery online and in console
+
+<p>Delve in deeper (coding part) - also mention widget gallery online and in console</p>
+#insert slide with widget arguments(inputID, label)
+
+<br>
 
 ## Examples  
 

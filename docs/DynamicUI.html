@@ -877,14 +877,61 @@ A KNN model can be tuned by determining how many neighbours you’re looking at.
 </blockquote>
 </blockquote>
 <p>
-To illustrate what you could potentially do, we’re going to use Hadley Wickham’s following example because even a simple example can get complex quickly.
+To illustrate what you could potentially do, we’re going to use Hadley Wickham’s following example It’s simpler than the scenario we’ve mentioned but the same process and logic applies. Careful though! Even a simple example can get complex quickly.
 </p>
 <center>
 <iframe width="100%" height="450" src="https://hadley.shinyapps.io/ms-dynamic-conditional/" scrolling="yes">
 </iframe>
 </center>
 <p><br></p>
-<pre class="r"><code>#code</code></pre>
+<pre class="r"><code>#Code created outside of the main UI. It is then called in the UI (to make code clearer).
+#Think of this like calling a macro inside of another
+parameter_tabs &lt;- tagList(
+  tags$style(&quot;#params { display:none; }&quot;), #Set to not appear as in previous example
+  #Places different input control widgets (based on distribution) on different tabs
+  tabsetPanel(id = &quot;params&quot;,
+    tabPanel(&quot;normal&quot;,
+      numericInput(&quot;mean&quot;, &quot;mean&quot;, value = 1),
+      numericInput(&quot;sd&quot;, &quot;standard deviation&quot;, min = 0, value = 1)),
+    tabPanel(&quot;uniform&quot;, 
+      numericInput(&quot;min&quot;, &quot;min&quot;, value = 0),
+      numericInput(&quot;max&quot;, &quot;max&quot;, value = 1)),
+    tabPanel(&quot;exponential&quot;,
+      numericInput(&quot;rate&quot;, &quot;rate&quot;, value = 1, min = 0),)
+))
+
+#UI Code
+ui &lt;- fluidPage(
+  sidebarLayout(
+    sidebarPanel(
+      selectInput(&quot;dist&quot;, #Input ID that is sent to the server 
+                  &quot;Distribution&quot;, 
+                  choices = c(&quot;normal&quot;, &quot;uniform&quot;, &quot;exponential&quot;)),
+      numericInput(&quot;n&quot;, 
+                  &quot;Number of samples&quot;, 
+                  value = 100),
+      #Essentially you are creating tabs inside of the side panel that appear based on your selected dist.
+      parameter_tabs, ), 
+    mainPanel(
+      plotOutput(&quot;hist&quot;)) #displays the graph
+))
+
+#Server Code
+server &lt;- function(input, output, session) {
+  observeEvent(input$dist, {#Update the tabPanels with input controls based on distribution chosen
+    updateTabsetPanel(session, &quot;params&quot;, selected = input$dist) }) 
+  
+  sample &lt;- reactive({ 
+    #produces the distribution chosen from above
+    #the sample will then be called by the renderPlot which is displayed by the UI
+    switch(input$dist,
+          normal = rnorm(input$n, input$mean, input$sd),
+          uniform = runif(input$n, input$min, input$max),
+          exponential = rexp(input$n, input$rate))})
+  
+  output$hist &lt;- renderPlot(hist(sample()))
+}</code></pre>
+<p><br></p>
 </div>
 <div id="creating-ui" class="section level2">
 <h2>Creating UI</h2>
@@ -893,6 +940,7 @@ To illustrate what you could potentially do, we’re going to use Hadley Wickham
 <p>
 This next topic is all about how to selectively show or hide certain parts of the UI.
 </p>
+<p><br></p>
 </div>
 <div id="checkpoint-5" class="section level2">
 <h2>Checkpoint 5</h2>
