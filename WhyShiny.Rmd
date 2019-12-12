@@ -7,12 +7,13 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 h1,h2 {font-family: 'Unica One', cursive;
-      font-size: 25px;}
+  font-size: 25px;}
+p2 {font-family: 'Unica One', cursive;
+  font-size: 25px;}       
 p {font-family: 'Open Sans', sans-serif;
-      font-size: 13px;}      
+  font-size: 15px;}   
 </style>
-
-```{r setup, include=FALSE}
+  ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 &nbsp;  
@@ -21,6 +22,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Intro  
 
+<br>
 <center>
 <iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={1b639700-c918-423d-b168-55eb1df8868d}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
 </center>
@@ -34,7 +36,7 @@ knitr::opts_chunk$set(echo = TRUE)
 Below are examples of what can be done in Shiny.  
 
 &nbsp;    
-Police and Demand Planning Tool
+Police and Demand Planning Tool ([Click here to Open separately](https://gallery.shinyapps.io/TSupplyDemand/))
 
 &nbsp;    
 
@@ -44,7 +46,9 @@ Police and Demand Planning Tool
 
 &nbsp;    
 
-A Shiny App to visualize and share a dog's medical history. [Github Code](https://github.com/jennaallen/dog_days/tree/master/pet-records-app)  
+A Shiny App to visualize and share a dog's medical history. ([Click here to Open separately](https://jennadallen.shinyapps.io/pet-records-app/)) 
+<br>
+[Github Code](https://github.com/jennaallen/dog_days/tree/master/pet-records-app)  
 &nbsp;  
 
 <center>
@@ -53,7 +57,9 @@ A Shiny App to visualize and share a dog's medical history. [Github Code](https:
 
 &nbsp;    
 
-Real estate analytics, prediction modeling and forecasting for over 20,000 U.S. real estate markets. [Github Code](https://github.com/j2scode/shinyHome) 
+Real estate analytics, prediction modeling and forecasting for over 20,000 U.S. real estate markets. ([Click here to Open separately](https://jjames.shinyapps.io/shinyHome/))
+<br>
+[Github Code](https://github.com/j2scode/shinyHome) 
 &nbsp;    
 
 <center>
@@ -111,14 +117,12 @@ shinyApp(ui = ui, server = server)
 
 ## Checkpoint 1
 <center>
-<iframe src="https://giphy.com/embed/UVG0BN8TOMKkPOJS6e" width="75" height="75" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-<font size="14">App Time</font>
-<iframe src="https://giphy.com/embed/UVG0BN8TOMKkPOJS6e" width="75" height="75" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+<p2>App Time</p2>
 </center>
 
 &nbsp;  
 
-We will gradually build an app in steps today. Follow the brief below for your first step. 
+<p>We will gradually build an app in steps today. Follow the brief below for your first step. </p>
 <center>
 <iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={e3d5ed33-23c3-49c4-8882-ea750e468c25}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
 </center>
