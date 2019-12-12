@@ -34,10 +34,10 @@ knitr::opts_chunk$set(echo = TRUE)
 <br>
 
 <p2>Example: Dynamic UI</p2>
-<p>Still wondering what we're on about? Check out the following example and read through the subsequent code. The app displays a graph when a particular dataset is chosen:</p>
+<p>Still wondering what we're on about? Check out the following example and read through the subsequent code. The app displays a graph when a particular dataset is chosen ('iris'):</p>
 
 <center>
-<iframe width="100%" height="475" src="https://g4most.shinyapps.io/dynamic_ex/" scrolling= "yes"></iframe>  
+<iframe width="100%" height="475" src="https://4-most.shinyapps.io/dynamic_ex/" scrolling= "yes"></iframe>  
 </center>  
 <br>
 ```{r eval=FALSE, include=TRUE}
@@ -91,6 +91,9 @@ Each control widget, such as `numericInput( )`, has a corresponding **update** c
 <p2>Example 1: Updating Inputs (Dataset Example)</p2>
 <br>
 <p>In the example below, we are going to solve the scenario we first mentioned - producing a drop-down list of variable names that changes based on the input dataset chosen. Read through the code to understand how the update version of a control widget functions.</p>
+<center>
+<iframe width="100%" height="450" src="https://4-most.shinyapps.io/dynamic_ex2/" scrolling= "yes"></iframe>  
+</center>
 
 ```{r eval=FALSE, include=TRUE}
 library(shiny)

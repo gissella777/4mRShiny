@@ -59,7 +59,7 @@ Ok, we know where to place things and where to tell them what to do - but what c
 <p></p>
 
 <center>
-<iframe width="100%" height="1000px" src="https://g4most.shinyapps.io/Example_file/" scrolling= "yes"></iframe>  
+<iframe width="100%" height="1000px" src="https://4-most.shinyapps.io/Example_file/" scrolling= "yes"></iframe>  
 </center>  
 
 
@@ -71,7 +71,7 @@ Ok, we know where to place things and where to tell them what to do - but what c
 Practice problems  
 
 <center>
-<iframe width="100%" height="550" src="https://g4most.shinyapps.io/testing1/" scrolling= "yes"></iframe> </center>  
+<iframe width="100%" height="550" src="https://4-most.shinyapps.io/Other_testing1/" scrolling= "yes"></iframe> </center>  
 
 ## Checkpoint 3
 
