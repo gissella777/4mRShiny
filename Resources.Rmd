@@ -1,6 +1,10 @@
 ---
 title: "Resources"
-
 ---
 
-## Empty for now
+## Not ready yet!
+
+<center>
+<div style="width:50%; height:30%">
+![](construct.png)
+</center>
