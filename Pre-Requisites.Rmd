@@ -166,7 +166,7 @@ R Shiny.
 
 <center>
 <div style="width:75%; height:65%">
-[![](baseR_img.png)](https://4mosteurope.sharepoint.com/:b:/r/sites/traininganddevelopment/RTraining/base-r.pdf?csf=1&e=X3kuim)
+[![](baseR_img.PNG)](https://4mosteurope.sharepoint.com/:b:/r/sites/traininganddevelopment/RTraining/base-r.pdf?csf=1&e=X3kuim)
 </div>
 </center>
 
@@ -174,7 +174,7 @@ R Shiny.
 
 <center>
 <div style="width:75%; height:65%">
-[![](shinyR_img.png)](https://4mosteurope.sharepoint.com/:b:/r/sites/traininganddevelopment/RTraining/Shiny%20Cheatsheet.pdf?csf=1&e=kGVSaP)
+[![](shinyR_img.PNG)](https://4mosteurope.sharepoint.com/:b:/r/sites/traininganddevelopment/RTraining/Shiny%20Cheatsheet.pdf?csf=1&e=kGVSaP)
 </div>
 </center>
 
@@ -182,7 +182,7 @@ R Shiny.
 
 <center>
 <div style="width:75%; height:65%">
-[![](ggplot_img.png)](https://4mosteurope.sharepoint.com/:b:/r/sites/traininganddevelopment/RTraining/ggplot2-cheatsheet.pdf?csf=1&e=4o84mk)
+[![](ggplot_img.PNG)](https://4mosteurope.sharepoint.com/:b:/r/sites/traininganddevelopment/RTraining/ggplot2-cheatsheet.pdf?csf=1&e=4o84mk)
 </div>
 </center>
 
@@ -190,7 +190,7 @@ R Shiny.
 
 <center>
 <div style="width:75%; height:65%">
-[![](plotly_img.png)](https://4mosteurope.sharepoint.com/:b:/r/sites/traininganddevelopment/RTraining/r_cheat_sheet.pdf?csf=1&e=qjqww7)
+[![](plotly_img.PNG)](https://4mosteurope.sharepoint.com/:b:/r/sites/traininganddevelopment/RTraining/r_cheat_sheet.pdf?csf=1&e=qjqww7)
 </div>
 </center>
 
@@ -198,7 +198,7 @@ R Shiny.
 
 <center>
 <div style="width:75%; height:65%">
-[![](timeR_img.png)](https://4mosteurope.sharepoint.com/:b:/r/sites/traininganddevelopment/RTraining/time-series.pdf?csf=1&e=ST362h)
+[![](timeR_img.PNG)](https://4mosteurope.sharepoint.com/:b:/r/sites/traininganddevelopment/RTraining/time-series.pdf?csf=1&e=ST362h)
 </div>
 </center>
 

@@ -1,36 +1,26 @@
 ---
-title: "Dashboards"
----
 
-```{r setup, include=FALSE}
+---
+<style>
+@import url('https://fonts.googleapis.com/css?family=Scope+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Scope+One|Unica+One&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+h1,h2 {font-family: 'Unica One', cursive;
+  font-size: 25px;}
+p2 {font-family: 'Unica One', cursive;
+  font-size: 25px;}       
+p {font-family: 'Open Sans', sans-serif;
+  font-size: 15px;}   
+</style>
+  ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 &nbsp;  
 
-Section to go through Dashboards - What are they? How to use Flexdashboard?
-&nbsp;  
 
+<p2>This section will cover the use of shinyDashboard (not the setup of general dashboards).</p2>
 <center>
-<iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={54a1b0a2-cb33-4989-9ca3-32d8da037ad0}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+<div style="width:50%; height:30%">
+![](construct.png)
 </center>
-&nbsp;  
-
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

@@ -7,11 +7,13 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 h1,h2 {font-family: 'Unica One', cursive;
-      font-size: 25px;}
+  font-size: 25px;}
+p2 {font-family: 'Unica One', cursive;
+  font-size: 25px;}       
 p {font-family: 'Open Sans', sans-serif;
-      font-size: 13px;}      
+  font-size: 15px;}   
 </style>
-```{r setup, include=FALSE}
+  ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 &nbsp;   
@@ -22,10 +24,19 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Intro to Server  
 
 &nbsp;  
-Equally as important as the UI is the Server component of an R Shiny app. Without the server, a UI is pretty but useless...
+<p>Equally as important as the UI is the Server component of an R Shiny app. Without the server, a UI is pretty but useless...</p>
 &nbsp;  
+<center>
+![](Server_s1.png)
 
-<iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={a2541ca7-1d47-4aee-a2e6-5773b2f0579e}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+</center><br>
+<center>
+![](Server_s2.png)
+</center><br>
+<center>
+![](Server_s3.png)
+</center>
+
 
 &nbsp;    
 
