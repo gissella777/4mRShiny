@@ -27,6 +27,13 @@ knitr::opts_chunk$set(echo = TRUE)
 
 <p2>SECTION UNDER CONSTRUCTION - NOT READY</p2>
 <br>
+<center>
+<div style="width:50%; height:30%">
+![](construct.png)
+</center>
+<br>
+
+
 <p2>Data Visualization</p2>
 <br><br>
 <p>No, we're not designers but consider the following situation: You've built a beautiful model after a lot of effort and time and now it's time to present it to your stakeholders. How many of you actually end up using the standard SAS graph outputs?? I'm willing to bet very of you do. 

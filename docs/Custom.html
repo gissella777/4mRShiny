@@ -573,7 +573,9 @@ $(document).ready(function () {
 h1,h2 {font-family: 'Unica One', cursive;
   font-size: 25px;}
 p2 {font-family: 'Unica One', cursive;
-  font-size: 25px;}       
+  font-size: 25px;}     
+p3 {font-family: 'Unica One', cursive;
+  font-size: 20px;}       
 p {font-family: 'Open Sans', sans-serif;
   font-size: 15px;}     
 </style>
@@ -583,7 +585,7 @@ p {font-family: 'Open Sans', sans-serif;
 <div id="intro" class="section level2">
 <h2>Intro</h2>
 <p> <br />
-So we have created an app. It works and has all the components you need..but it still looks a bit…</p>
+<p3>So we have created an app. It works and has all the components you need..but it still looks a bit…</p3></p>
 <center>
 <iframe src="https://giphy.com/embed/11d6avgEFTqmBO" width="200" height="183" frameBorder="0" class="giphy-embed" allowFullScreen>
 </iframe>
@@ -619,42 +621,78 @@ This is an embedded <a target="_blank" href="https://office.com">Microsoft Offic
 </center>
 <p> </p>
 <p>
-If you would like some help in learning how to manipulate text, check out the following shiny App - <a href="https://iheart.shinyapps.io/shinyMCE-01-basic/">Follow this link to open in a separate window.</a>
+The following RStudio site describes the use of the HTML tags quite well. So if you want to use the tags in your app today, <a href="https://shiny.rstudio.com/articles/tag-glossary.html">please check it out</a>.
 </p>
 <center>
-<iframe width="100%" height="550" src="https://iheart.shinyapps.io/shinyMCE-01-basic/" scrolling="yes">
+<iframe width="100%" height="750" src="https://shiny.rstudio.com/articles/tag-glossary.html" scrolling="yes">
 </iframe>
 </center>
+<br><br> <p2>CSS</p2> <br>
+<p>
+You can add custom CSS to your app by creating a www/ subdirectory to your app and adding a CSS file there. Suppose, for example, you want to change the title font of your dashboard to the same font as the rest of the dashboard, so that it looks like this:
+</p>
+<center>
+<img src="data:image/png;base64,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" />
+</center>
+<br>
+<p>
+To do this, first create a file named www/custom.css with the following:
+</p>
+<pre class="css"><code>.main-header .logo {
+  font-family: &quot;Georgia&quot;, Times, &quot;Times New Roman&quot;, serif;
+  font-weight: bold;
+  font-size: 16px;
+}</code></pre>
+<p>
+Then refer to that CSS file from the UI of your app:
+</p>
+<pre class="r"><code>## ui.R ##
+dashboardPage(
+  dashboardHeader(title = &quot;Custom font&quot;),
+  dashboardSidebar(),
+  dashboardBody(
+    tags$head(
+      tags$link(rel = &quot;stylesheet&quot;, type = &quot;text/css&quot;, href = &quot;custom.css&quot;)
+    )
+  )
+)</code></pre>
 </div>
 <div id="resources" class="section level2">
 <h2>Resources</h2>
 <p> </p>
 <p2>Determining colors</p2> <br> <a href="https://imagecolorpicker.com/">color Picker</a>
 <p>
+This site allows you to upload images and pick the color of the part of the image that you wish to reproduce. This is helpful if you want to use the color of a particular client’s logo but don’t know how to match it exactly. This site will provide the exact hex # for the color.coolo
 </p>
 <p><br></p>
 <p2>Palette Assistance</p2> <br> <a href="https://coolors.co/">Coolors</a>
 <p>
+Want to create a palette of colors to ensure your app is consistent, professional and looks good? This website allows you to choose a color and will provide a palettes that go with your color.
 </p>
 <p><br></p>
 <p2>Shiny Themes</p2> <br> <a href="https://rstudio.github.io/shinythemes/">Shiny Themes</a>
 <p>
+This package allows you to apply a set theme to your app which can improve the look of your app very quickly! Please note - you will be limited to the themes included in the package.
 </p>
 <p><br></p>
 <p2>Google Fonts API</p2> <br> <a href="https://fonts.google.com/">Google Fonts API</a>
 <p>
+Want to include interesting fonts that are not built into your machine? The google fonts api has hundreds of free fonts that you can include in your app with very little coding and no downloads!
 </p>
 <p><br></p>
 <p2>Canva</p2> <br> <a href="https://www.canva.com/">Canva</a>
 <p>
+A powerful graphic design tool with a free and paid option. This is very easy to use and requires no real graphic design knowledge. They also provide dozens of templates, photos, graphic elements and more. So if you’d like to add some custom images, slides or even create your own logo - check out Canva.
 </p>
 <p><br></p>
 <p2>w3 - HTML/CSS/JS Help</p2> <br> <a href="https://www.w3schools.com/">w3schools</a>
 <p>
+Recommended for reference material on CSS styling (and HTML and other useful web related syntax). A lot of their descriptions include interactive examples that you can manipulate yourself to really understand how something works. Also check out the following app: <a href="https://iheart.shinyapps.io/shinyMCE-01-basic/">HTML and Text</a>
 </p>
 <p><br></p>
 <p2>Curated List of Design Tools</p2> <br> <a href="https://flawlessapp.io/designtools">Awesome Design Tools</a>
 <p>
+This site is well regarded curated list of top design and graphic tools that may assist you in the design of your app. So if you can’t find it elsewhere, look here.
 </p>
 <p><br></p>
 </div>
