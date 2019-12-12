@@ -345,3 +345,6 @@ This next topic is all about how to selectively show or hide certain parts of th
 ## Checkpoint 5
 &nbsp;  
 
+<center>
+![](checkpoint5_dyn.png)
+</center>
