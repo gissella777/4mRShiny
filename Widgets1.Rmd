@@ -84,7 +84,21 @@ Practice problems
 ## Advanced Widgets
 
 &nbsp;  
-More resource than to actually cover
+<p2>Interested in more advanced widgets?</p2>
+<br><br>
+<p>Check out the following:</p>
+<ul>
+<li><p>[shinyWidgets:](https://github.com/dreamRs/shinyWidgets)</p></li>
+<li><p>[HTML Widgets for R:](https://github.com/ramnathv/htmlwidgets) Learn to create your own widgets. This is an advanced topic so don't get discouraged!</p></li>
+<li><p>[JavaScript Widgets:](https://shiny.rstudio.com/articles/js-build-widget.html) Start building a widget in javascript.</p></li>
+</ul>
+
+
+
+
+
+
+
 
 
 

@@ -340,10 +340,45 @@ server <- function(input, output, session) {
 <p2>Selective display of the UI</p2>
 <br><br>
 <p>
-This next topic is all about how to selectively show or hide certain parts of the UI.
-</p>
+This next topic is all about how to selectively show or hide certain parts of the UI. Whilst similar to the previous Dynamic UI topics covered, in this section we learn how to use special functions to render UI components. You will insert what is essentially a placeholder in the UI, `uiOutput( )`. The placeholder will be filled by what you place in the server code. In the server logic we then use `renderUI( )` to define what we would want to display in the placeholder.</p>
+<p>Although this may appear simpler than some of the previous techniques we've covered, `renderUI( )` has to to load, trigger an event, call the server, and then insert the UI components which can slow down your app. Keep in mind that you are sacrificing performance for coding ease by using this particular technique.Even more importantly, you will need to reselect values when the UI component changes (i.e., the current input value is 'destroyed' and a new one must be 'created'). You will need to add additional code to maintain the value chosen (use `isolate( )`).</p>
+
+<p>To illustrate:</p>
+
+<center>
+<iframe width="100%" height="400" src="https://hadley.shinyapps.io/ms-render-simple/" scrolling= "yes"></iframe>  
+</center>  
 
 <br>
+```{r eval=FALSE, include=TRUE}
+#UI Code
+ui <- fluidPage(
+  textInput("label", "label"),
+  selectInput("type", "type", c("slider", "numeric")),
+  uiOutput("numeric") #A placeholder
+  #uiOutput will display whatever is defined in the Server logic as shown below
+)
+
+#Server Code
+server <- function(input, output, session) {
+  output$numeric <- renderUI({ #renderUI tells Shiny to render the following UI components 
+    #the components are shown where the placeholder above (uiOutput) is defined
+    if (input$type == "slider") {
+      sliderInput("dynamic", 
+                  input$label, 
+                  value = isolate(input$dynamic),  #Code needed to maintain selected value 
+                  min = 0, max = 10)} 
+    else {
+      numericInput("dynamic", 
+                   input$label, 
+                   value = isolate(input$dynamic), #Code needed to maintain selected value 
+                   min = 0, max = 10)  }
+  })
+}
+```
+<br>
+<p>For more advanced examples, check out Hadley Wickham's additional examples - [Dynamic UI with Code](https://mastering-shiny.org/action-dynamic.html#multiple-controls)</p>
+
 
 ## Checkpoint 5
 &nbsp;  

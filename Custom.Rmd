@@ -1,4 +1,3 @@
----
 
 ---
 <style>
@@ -54,10 +53,51 @@ Today we're only going to cover the first two options.</p>
 <iframe width="100%" height="550" src="https://iheart.shinyapps.io/shinyMCE-01-basic/" scrolling= "yes"></iframe>  
 </center>
 
-## Shiny Themes
+## Resources
 &nbsp;  
 
-Introduce themes
+<p2>Determining colors</p2>
+<br>
+[color Picker](https://imagecolorpicker.com/)
+<p></p>
+<br>
+
+<p2>Palette Assistance</p2>
+<br>
+[Coolors](https://coolors.co/)
+<p></p>
+<br>
+
+<p2>Shiny Themes</p2>
+<br>
+[Shiny Themes](https://rstudio.github.io/shinythemes/)
+<p></p>
+<br>
+
+<p2>Google Fonts API</p2>
+<br>
+[Google Fonts API](https://fonts.google.com/)
+<p></p>
+<br>
+
+<p2>Canva</p2>
+<br>
+[Canva](https://www.canva.com/)
+<p></p>
+<br>
+
+<p2>w3 - HTML/CSS/JS Help</p2>
+<br>
+[w3schools](https://www.w3schools.com/)
+<p></p>
+<br>
+
+
+<p2>Curated List of Design Tools</p2>
+<br>
+[Awesome Design Tools](https://flawlessapp.io/designtools)
+<p></p>
+<br>
 
 ## Checkpoint 8
 &nbsp;  
