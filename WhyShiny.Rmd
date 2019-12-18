@@ -113,6 +113,14 @@ Real estate analytics, prediction modeling and forecasting for over 20,000 U.S. 
 ![](WhyLearn_Start_1.png)
 </div>
 </center>
+<br>  
+
+<p>If you have both your UI and Server code in one R script, your folder should look like the following: </p>
+<center>
+<div style="width:75%; height:65%">
+![](Folder_struct_ex.png)
+</div>
+</center>
 &nbsp;  
 
 <img style="width:30px; height:25px" src="Practical.png"> <p style="font-size:16px; display:inline;">Task 2: Create Shiny script and load Shiny library. </p></img> 
@@ -157,7 +165,7 @@ shinyApp(ui = ui, server = server)
 
 <p>We will gradually build an app in steps today. Follow the brief below for your first step. </p>
 <center>
-<iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={e3d5ed33-23c3-49c4-8882-ea750e468c25}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+![](Task1.png)
 </center>
 
 

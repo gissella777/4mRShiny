@@ -39,7 +39,11 @@ Before we go into the nitty gritty of a UI (User Interface), let's go through wh
 &nbsp;  
 
 <center>
-<iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={2d107d5a-b149-495d-bbc9-56f4abc225c4}&amp;action=embedview&amp;wdAr=1.7777777777777777" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+![](uistruct_1.png)
+</center>
+<br>
+<center>
+![](uistruct_2.png)
 </center>
 &nbsp;  
 
@@ -47,7 +51,7 @@ Before we go into the nitty gritty of a UI (User Interface), let's go through wh
 &nbsp;  
 
 <p>
-In the slides above we covered the various options for how to layout the UI for your app. Today we will focus on using **fluidpage()** to create the layout of your app as it's the most common layout function today for general Shiny apps and you will likely come across it quite often in the example code you see across the internet. This is not to say that you shouldn't learn the other two options! **Flexdahsboard()** is commonly utilised in dashboard applications (i.e., your monthly MI) and the use of CSS Grid is very likely to grow in the future.</p>  
+We have more than 1 option when determining how to layout the UI for an app (i.e., fluidPage, shinyDashboard and CSS Grid). Today we will focus mostly on using **fluidpage()** to create the layout of your app as it's the most common layout function today for general Shiny apps and you will likely come across it quite often in the example code you see across the internet. This is not to say that you shouldn't learn the other two options! **Flexdahsboard()** is commonly utilised in dashboard applications (i.e., your monthly MI) and the use of CSS Grid is very likely to grow in the future. In a tab above we've also included a slide deck by Eduardo Cortes on how to use and build an app with shinyDashboard.</p>  
 
 <p>As mentioned previously, **fluidPage()** is a layout function which defines defines the UI for your app. It will take on arguments as needed (i.e., content) that you may want your layout to contain.</p>
 
@@ -224,12 +228,12 @@ ui <- fluidPage( #All layout functions are held here
   sidebarLayout(
     sidebarPanel( #sidebarPanel feed into the sidebarLayout
       # Input: Slider for the number of bins - Not expected to know this yet
-      sliderInput(inputId = "bins",
+      sliderInput(inputid = "bins",
                   label = "Number of bins:",
                   min = 1, max = 50, value = 30) ),
     mainPanel( #mainPanel to the right of the sidebarPanel 
       #displays output - Not expected to know this yet
-      plotOutput(outputID="distplot") )
+      plotOutput(outputID="distPlot") )
   )
 )
 
@@ -325,26 +329,7 @@ shinyApp(ui = ui, server = server)
 ```
 &nbsp; 
 
-<p>
-In the following section, we'll look at a simplified version of the 4most Economic Model tool and how to recreate the layout. As a final step, we'll also cover conditionalPanels. 
-</p>
-&nbsp;  
 
-<p2>shinyDashboard with Eduardo</p2>
-&nbsp;  
-<p>Below we've embedded a Shiny app built by our very own Eduardo Cortes which illustrates the use of shinyDashboard - an alternative to using fluidPage( ). Depending on the motivation behind your app, using shinyDashboard may make more sense.[Right click to open separately](https://eduardo2c.shinyapps.io/analytics_summit/)</p>
-
-<center>
-<iframe width="100%" height="550" src="https://eduardo2c.shinyapps.io/analytics_summit/" scrolling= "yes"></iframe>
-</center> 
-
-<p>Let's walk through the creation of the app with Eduardo:</p>
-
-<center>
-<iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={627d0bd9-2c0c-4e3a-99a5-b8cc04c8c98a}&amp;action=embedview&amp;wdAr=1.7777777777777777" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
-</center>
-
-&nbsp;    
 
 <p2><a name="targetstatic">Static Elements</a></p2>
 
@@ -408,12 +393,35 @@ div.blue {background-color:#0f0f4b; border-radius:5px; padding:5px;}
 
 &nbsp;    
 
+## shinyDashboard
+&nbsp;    
+<p2>shinyDashboard with Eduardo</p2>
+&nbsp;  
+<p>Below we've embedded a Shiny app built by our very own Eduardo Cortes which illustrates the use of shinyDashboard - an alternative to using fluidPage( ). Depending on the motivation behind your app, using shinyDashboard may make more sense. [Right click to open separately](https://eduardo2c.shinyapps.io/analytics_summit/)</p>
+
+<center>
+<iframe width="100%" height="550" src="https://eduardo2c.shinyapps.io/analytics_summit/" scrolling= "yes"></iframe>
+</center> 
+
+<p>Let's walk through the creation of the app with Eduardo ([Download here](https://4mosteurope.sharepoint.com/:p:/r/sites/traininganddevelopment/RTraining/AnalyticsSummitShiny/R%20Shiny%20Course.pptx?d=w627d0bd92c0c4e3a99a5b8cc04c8c98a&csf=1&e=oaGdbx)):</p>
+
+<center>
+<iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={627d0bd9-2c0c-4e3a-99a5-b8cc04c8c98a}&amp;action=embedview&amp;wdAr=1.7777777777777777" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+</center>
+
+&nbsp;       
+
+
 ## UI Practice    
 &nbsp;    
-Practice your knowledge! For solutions today - ask Gissella or Nir :)  
+<p>Practice your knowledge! Try this before you look at the solutions - I guarantee you will find it harder when you're building an app if you don't. </p>
 &nbsp;    
+<center>
+![](UI_practice.png) 
+</center>
+<br>
 
-<iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={0773d174-dea0-47bc-8a5b-33fcac729730}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>  
+For solutions - [Click on this link (Solutions are embedded shiny apps so you may need to reload any that time out).](https://4-most.shinyapps.io/Solutions/)
 &nbsp;  
 
 
@@ -464,11 +472,13 @@ Practice your knowledge! For solutions today - ask Gissella or Nir :)
 
 ## Checkpoint 2
 &nbsp;    
-Time for the next step in creating our app today:  
-&nbsp; 
-
-<iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={d0742f79-f991-4f49-969e-18c4ed484796}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+<p>Time for the next step in creating our app today:</p>  
+&nbsp;
+<center>
+![](Task2.png)
+</center>
 &nbsp;  
+
 <p2>Wireframing</p2>
 
 <p>The following website is a free resources that allows you to draft the layout to a website/application. [Click on me to open](http://framebox.org/) </p>
