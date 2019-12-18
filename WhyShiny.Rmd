@@ -24,7 +24,40 @@ knitr::opts_chunk$set(echo = TRUE)
 
 <br>
 <center>
-<iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={1b639700-c918-423d-b168-55eb1df8868d}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+![](WhyShiny_s1.png)  
+<br>
+
+![](WhyShiny_s2.png) 
+<br>
+
+![](WhyShiny_s3.png) 
+<br>
+
+![](WhyShiny_s4.png) 
+<br>
+
+![](WhyShiny_s5.png) 
+<br>
+
+![](WhyShiny_s6.png) 
+<br>
+
+![](WhyShiny_s7.png) 
+<br>
+
+![](WhyShiny_s8.png) 
+<br>
+
+![](WhyShiny_s9.png) 
+<br>
+
+![](WhyShiny_s10.png) 
+<br>
+
+![](WhyShiny_s11.png) 
+<br>
+
+![](WhyShiny_s12.png)
 </center>
 
 &nbsp;  
