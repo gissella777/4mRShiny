@@ -32,21 +32,34 @@ knitr::opts_chunk$set(echo = TRUE)
 </center>
 <p2>So what do we do??</p2>  
 
-<p>Fortunately we have several options available in Shiny that can change the appear ance of your app. For example: 
+<p>Fortunately we have several options available in Shiny that can change the appear ance of your app. For example:</p> 
 <ul>
-<li>HTML/CSS</li>
-<li>Shiny Themes</li>
-<li>Javascript</li>
+<li><p>HTML/CSS</p></li>
+<li><p>Shiny Themes</p></li>
+<li><p>Javascript</p></li>
 </ul>
 
-Today we're only going to cover the first two options.</p>
+<p>Today we're only going to cover the first two options.</p>
 
 ## HTML/CSS  
 &nbsp;  
 <p>The following section aims to show you how HTML and CSS are used in Shiny and how you can use it without having to become a full-blown website developer.<p>
 
 <center>
-<iframe src="https://4mosteurope.sharepoint.com/sites/traininganddevelopment/_layouts/15/Doc.aspx?sourcedoc={efbfce59-1156-4043-87a3-f574f0298761}&amp;action=embedview&amp;wdAr=1.7777777777777776" width="962px" height="565px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+![](cust_html1.png)  
+<br>
+
+![](cust_html2.png)  
+<br>
+
+![](cust_html3.png)  
+<br>
+
+![](cust_html4.png)  
+<br>
+
+![](cust_html5.png)
+
 </center>
 &nbsp; 
 
