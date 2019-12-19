@@ -687,7 +687,7 @@ Each widget will contain the required arguments described below. As a SAS equiva
 <ul>
 <li>
 <p>
-<strong>inputID:</strong> This argument is the name that you will use for this widget. It must be unique because it is the ‘key’ that the server calls on to access the value of the widget. This is very similar to a macro variable in SAS (must be unique and contains a value or string). (<em>required arg</em>)
+<strong>inputid:</strong> This argument is the name that you will use for this widget. It must be unique because it is the ‘key’ that the server calls on to access the value of the widget. This is very similar to a macro variable in SAS (must be unique and contains a value or string). This argument is always the <strong>first</strong> argument and so using <code>inputid =</code> is typically optional, in case you don’t see it in an example you pick up from the internet. (<em>required arg</em>)
 </p>
 </li>
 <li>
@@ -811,7 +811,7 @@ The output with ID ‘message’ can now be displayed in the UI (next section!).
 </li>
 </ul>
 <pre class="r"><code>ui &lt;- fluidPage(
-        textInput(inputId = &quot;username&quot;, #Input ID of &quot;username&quot;
+        textInput(inputid = &quot;username&quot;, #Input ID of &quot;username&quot;
                   label = &quot;What is your name?&quot;), 
         textOutput(&quot;message&quot;) #Displays the renderText assigned to output$message in the UI
         #The output is only possible because of the server logic
@@ -941,6 +941,7 @@ See below for an example of the process:
  <br />
 <p2>Widget examples</p2>
 <p>
+Embedded below is a shiny app that you can interact with! It contains some of the key widgets/control inputs you will use when building an app.If you would like to open it in a separate window - <a href="https://4-most.shinyapps.io/Example_file/">Click here!</a>
 </p>
 <center>
 <iframe width="100%" height="1000px" src="https://4-most.shinyapps.io/Example_file/" scrolling="yes">
@@ -950,8 +951,12 @@ See below for an example of the process:
 </div>
 <div id="practice" class="section level2">
 <h2>Practice</h2>
-<p> <br />
-Practice problems</p>
+ <br />
+<p2>Practice problems</p2><br />
+
+<p>
+Uncomment the code below and see if you can create the widget! If you would like to open the app in a separate window - <a href="https://4-most.shinyapps.io/Other_testing1/">Click here!</a>
+</p>
 <center>
 <iframe width="100%" height="550" src="https://4-most.shinyapps.io/Other_testing1/" scrolling="yes">
 </iframe>
